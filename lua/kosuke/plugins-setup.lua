@@ -27,6 +27,8 @@ return packer.startup(function(use)
 
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
+  use("akinsho/nvim-bufferline.lua") -- tab appearance
+
   use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
