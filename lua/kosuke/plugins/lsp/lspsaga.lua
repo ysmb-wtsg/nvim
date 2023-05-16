@@ -4,11 +4,15 @@ if not saga_status then
 end
 
 saga.setup({
-  move_in_sage = { prev = "<C-k>", next = "<C-j>" },
-  finder_action_keys = {
-    open = "<CR>",
-  },
-  definition_action_keys = {
+  -- keybinds for navigation in lspsaga window
+  scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
+  -- use enter to open file with definition preview
+  definition = {
     edit = "<CR>",
+  },
+  ui = {
+    colors = {
+      normal_bg = "#022746",
+    },
   },
 })
