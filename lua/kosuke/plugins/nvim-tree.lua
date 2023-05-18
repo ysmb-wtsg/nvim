@@ -12,6 +12,7 @@ local function on_attach(bufnr)
   api.config.mappings.default_on_attach(bufnr)
   vim.keymap.del("n", "<C-t>", { buffer = bufnr })
   vim.keymap.set("n", "t", api.node.open.tab, opts("Open: New Tab"))
+  vim.keymap.set("n", " ", api.node.open.edit, opts("Open"))
 end
 
 -- recommended settings from nvim-tree documentation
