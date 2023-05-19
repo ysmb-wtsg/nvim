@@ -30,7 +30,7 @@ local on_attach = function(client, bufnr)
   keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cusor_diagnostics<CR>", opts)
   keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
   keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
-  keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+  keymap.set("n", "<leader>hd", "<cmd>Lspsaga hover_doc<CR>", opts)
   keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts)
 
   if cllient.name == "tsserver" then
