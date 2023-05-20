@@ -49,6 +49,25 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tl", ":tabn<CR>") -- go to next tab
 keymap.set("n", "<leader>th", ":tabp<CR>") -- go to previous tab
 
+-- mainly for markdown
+keymap.set("i", "っj", "<ESC>")
+keymap.set("i", "　", " ")
+keymap.set("i", "ーー", "- ")
+keymap.set("i", "”", '"')
+keymap.set("i", "＃", '#')
+keymap.set("i", "１。", "1. ")
+keymap.set("i", "２。", "2. ")
+keymap.set("i", "３。", "3. ")
+keymap.set("i", "４。", "4. ")
+keymap.set("i", "５。", "5. ")
+keymap.set("i", "「」", "[]()<Left><Left><Left>")
+keymap.set("i", "＞", ">")
+keymap.set("i", "｀", "`")
+keymap.set("i", "＊", "*")
+keymap.set("i", "〜", "~")
+keymap.set("i", "｜", "|")
+keymap.set("i", "：", ":")
+
 -- plugin keymaps
 
 -- nvim-tree
