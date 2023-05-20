@@ -25,6 +25,8 @@ end
 return packer.startup(function(use)
   use("wbthomason/packer.nvim")
 
+  use("FotiadisM/tabset.nvim") -- set indent each language
+
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
   use("akinsho/nvim-bufferline.lua") -- tab appearance
