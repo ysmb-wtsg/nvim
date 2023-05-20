@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
-function set_to_multimodes (modes, after, before)
+local function set_to_multimodes (modes, after, before)
   for mode in string.gmatch(modes, "([^,]+)") do
     keymap.set(mode, after, before)
   end
