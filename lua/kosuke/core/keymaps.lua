@@ -49,6 +49,8 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tl", ":tabn<CR>") -- go to next tab
 keymap.set("n", "<leader>th", ":tabp<CR>") -- go to previous tab
 
+keymap.set("n", "<C-a>", "gg<S-v><S-g>")
+
 -- mainly for markdown
 keymap.set("i", "っj", "<ESC>")
 keymap.set("i", "　", " ")
