@@ -21,7 +21,7 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 
--- backspace
+-- yank to clipboard
 opt.clipboard:append("unnamedplus")
 
 -- split windows
