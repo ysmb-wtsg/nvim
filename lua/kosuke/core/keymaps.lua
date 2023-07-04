@@ -80,3 +80,8 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
 keymap.set("n", "<leader>fn", "<cmd>Telescope help_tags<CR>")
+
+-- markdown-preview
+keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
+keymap.set("n", "<leader>mt", ":MarkdownPreviewToggle<CR>")
+

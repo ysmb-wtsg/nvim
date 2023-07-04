@@ -90,7 +90,13 @@ return packer.startup(function(use)
 
   -- git signs plugin
   use("lewis6991/gitsigns.nvim")
-  
+
+  -- markdown preview
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
   if packer_bootstrap then
     require("packer").sync()
   end
