@@ -28,8 +28,8 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 keymap.set("n", "x", '"_x')
 
-keymap.set("n", "<leader>+", "<C-a>")
-keymap.set("n", "<leader>-", "<C-x>")
+keymap.set("n", "+", "<C-a>")
+keymap.set("n", "-", "<C-x>")
 
 keymap.set("n", "<leader>w", ":w<CR>")
 keymap.set("n", "<leader>q", ":q<CR>")
@@ -50,6 +50,9 @@ keymap.set("n", "<leader>tl", ":tabn<CR>") -- go to next tab
 keymap.set("n", "<leader>th", ":tabp<CR>") -- go to previous tab
 
 keymap.set("n", "<C-a>", "gg<S-v><S-g>")
+
+keymap.set("n", "o", "o<ESC>")
+keymap.set("n", "<S-o>", "<S-o><ESC>")
 
 -- mainly for markdown
 keymap.set("i", "っj", "<ESC>")
