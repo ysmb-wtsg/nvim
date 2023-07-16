@@ -36,7 +36,7 @@ keymap.set("n", "<leader>q", ":q<CR>")
 keymap.set("n", "<leader>fq", ":q!<CR>") -- !=force
 keymap.set("n", "<leader>jj", ":wq<CR>")
 
-keymap.set("n", "<loader>s", ":%s/")
+keymap.set("n", "<leader>s", ":%s/")
 keymap.set("n", "<leader>i", "gg=<S-g>")
 
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
