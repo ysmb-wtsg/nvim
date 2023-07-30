@@ -16,6 +16,10 @@ telescope.setup({
         ["<C-j>"] = actions.move_selection_next,
         ["<C-q>"] = actions.close,
       },
+      n = {
+        ["t"] = actions.select_tab,
+        ["q"] = actions.close,
+      }
     }
   }
 })
