@@ -31,7 +31,7 @@ return packer.startup(function(use)
 
   use("akinsho/nvim-bufferline.lua") -- tab appearance
 
-  use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
