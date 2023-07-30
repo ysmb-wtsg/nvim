@@ -12,8 +12,8 @@ end
 
 set_to_multimodes("n,v", "j", "gj")
 set_to_multimodes("n,v", "k", "gk")
-set_to_multimodes("n,v", "<S-j>", "<C-d>")
-set_to_multimodes("n,v", "<S-k>", "<C-u>")
+set_to_multimodes("n,v", "<S-j>", "15j")
+set_to_multimodes("n,v", "<S-k>", "15k")
 set_to_multimodes("n,v", "<S-h>", "g^")
 set_to_multimodes("n,v", "<S-l>", "g$")
 keymap.set("n", "<Tab>", ">>")
