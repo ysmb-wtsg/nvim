@@ -12,12 +12,13 @@ telescope.setup({
   defaults = {
     mappings = {
       i = {
+        ["<C-o>"] = actions.select_tab,
         ["<C-k>"] = actions.move_selection_previous,
         ["<C-j>"] = actions.move_selection_next,
         ["<C-q>"] = actions.close,
       },
       n = {
-        ["t"] = actions.select_tab,
+        ["o"] = actions.select_tab,
         ["q"] = actions.close,
       }
     }
