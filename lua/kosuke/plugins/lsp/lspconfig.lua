@@ -83,11 +83,6 @@ lspconfig["lua_ls"].setup({
 lspconfig["pyright"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
-  settings = {
-    python = {
-      pythonPath = "/Users/ikeda-ks/.pyenv/shims/python"
-    }
-  }
 })
 
 lspconfig["gopls"].setup({
