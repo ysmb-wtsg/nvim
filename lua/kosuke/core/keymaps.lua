@@ -28,6 +28,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 keymap.set("n", "x", '"_x')
 keymap.set("n", "c", '"_c')
+keymap.set("n", "<S-c>", '"_C')
 
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
