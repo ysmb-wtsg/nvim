@@ -83,11 +83,11 @@ lspconfig["lua_ls"].setup({
 lspconfig["pyright"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
-})
-
-lspconfig["gopls"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
+  settings = {
+    python = {
+      pythonPath = "~/.pyenv/shims/python"
+    },
+  },
 })
 
 lspconfig["angularls"].setup{
