@@ -20,10 +20,9 @@ local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true, buffer = bufnr }
 
   -- set keybinds
-  keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>", opts)
-  keymap.set("n", "gD", "<cmd>Lspsaga hover_doc<CR>", opts)
-  keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
-  keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+  keymap.set("n", "gf", "<cmd>Lspsaga finder tyd+ref+imp+def ++normal<CR>", opts)
+  keymap.set("n", "gd", "<cmd>Lspsaga hover_doc<CR>", opts)
+  keymap.set("n", "go", "<cmd>Lspsaga outline<CR>", opts)
   keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
   keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts)
   keymap.set("n", "<leader>D", "<cmd>Lspsaga show_buf_diagnostics<CR>", opts)
