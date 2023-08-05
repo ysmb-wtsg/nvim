@@ -56,10 +56,6 @@ keymap.set("n", "<C-a>", "gg<S-v><S-g>")
 keymap.set("n", "o", "o<ESC>")
 keymap.set("n", "<S-o>", "<S-o><ESC>")
 
-keymap.set("n", "d<S-h>", "vg^d")
-keymap.set("n", "x<S-h>", 'vg^"_x')
-keymap.set("n", "c<S-h>", 'vg^"_c')
-
 -- mainly for markdown
 keymap.set("i", "っj", "<ESC>")
 keymap.set("i", "　", " ")
