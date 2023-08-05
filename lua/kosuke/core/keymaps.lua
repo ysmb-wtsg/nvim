@@ -27,8 +27,7 @@ keymap.set("i", "kk", "<ESC>")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 keymap.set("n", "x", '"_x')
-keymap.set("n", "c", '"_c')
-keymap.set("v", "c", '"_c')
+set_to_multimodes("n,v", "c", '"_c')
 keymap.set("n", "<S-c>", '"_C')
 
 keymap.set("n", "+", "<C-a>")
@@ -47,15 +46,19 @@ keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equil width
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
-keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
-keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tl", ":tabn<CR>") -- go to next tab
-keymap.set("n", "<leader>th", ":tabp<CR>") -- go to previous tab
+keymap.set("n", "tn", ":tabnew<CR>") -- open new tab
+keymap.set("n", "tx", ":tabclose<CR>") -- close current tab
+keymap.set("n", "tl", ":tabn<CR>") -- go to next tab
+keymap.set("n", "th", ":tabp<CR>") -- go to previous tab
 
 keymap.set("n", "<C-a>", "gg<S-v><S-g>")
 
 keymap.set("n", "o", "o<ESC>")
 keymap.set("n", "<S-o>", "<S-o><ESC>")
+
+keymap.set("n", "d<S-h>", "vg^d")
+keymap.set("n", "x<S-h>", 'vg^"_x')
+keymap.set("n", "c<S-h>", 'vg^"_c')
 
 -- mainly for markdown
 keymap.set("i", "っj", "<ESC>")
