@@ -101,6 +101,12 @@ return packer.startup(function(use)
       run = function() vim.fn["mkdp#util#install"]() end,
   })
 
+  -- use nvim in chrome
+  use {
+      'glacambre/firenvim',
+      run = function() vim.fn['firenvim#install'](0) end
+  }
+
   if packer_bootstrap then
     require("packer").sync()
   end
