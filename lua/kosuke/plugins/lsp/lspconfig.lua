@@ -20,7 +20,7 @@ local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true, buffer = bufnr }
 
   -- set keybinds
-  keymap.set("n", "gf", "<cmd>Lspsaga finder tyd+ref+imp+def ++normal<CR>", opts)
+  keymap.set("n", "gf", "<cmd>Lspsaga finder def+ref ++normal<CR>", opts)
   keymap.set("n", "gd", "<cmd>Lspsaga hover_doc<CR>", opts)
   keymap.set("n", "go", "<cmd>Lspsaga outline<CR>", opts)
   keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
