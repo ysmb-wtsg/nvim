@@ -82,11 +82,6 @@ lspconfig["lua_ls"].setup({
 lspconfig["pyright"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
-  settings = {
-    python = {
-      pythonPath = "~/.pyenv/shims/python"
-    },
-  },
 })
 
 lspconfig["gopls"].setup({
@@ -98,6 +93,7 @@ lspconfig["angularls"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
+
 lspconfig["docker_compose_language_service"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
