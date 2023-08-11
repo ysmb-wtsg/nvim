@@ -27,5 +27,14 @@ lualine_nightfly.command = {
 lualine.setup({
   options = {
     theme = lualine_nightfly
+  },
+  sections = {
+    lualine_a = {
+      {
+        'datetime',
+        -- options: default, us, uk, iso, or your own format string ("%H:%M", etc..)
+        style = '%Y/%m/%d(%A) %H:%M'
+      }
+    }
   }
 })
