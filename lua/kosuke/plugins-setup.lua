@@ -40,7 +40,10 @@ return packer.startup(function(use)
   use("akinsho/toggleterm.nvim") -- toggle terminal
 
   -- essential plugins
-  use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+  use({
+    "kylechui/nvim-surround",
+    branh = "main"
+  })
   use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
   use("numToStr/Comment.nvim") -- commenting with gc
