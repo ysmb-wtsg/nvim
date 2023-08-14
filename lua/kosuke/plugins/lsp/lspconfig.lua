@@ -25,8 +25,6 @@ local on_attach = function(client, bufnr)
   keymap.set("n", "go", "<cmd>Lspsaga outline<CR>", opts)
   keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
   keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts)
-  keymap.set("n", "<leader>D", "<cmd>Lspsaga show_buf_diagnostics<CR>", opts)
-  keymap.set("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
 
   if client.name == "tsserver" then
     keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")

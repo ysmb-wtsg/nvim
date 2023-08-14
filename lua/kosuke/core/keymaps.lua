@@ -92,3 +92,6 @@ keymap.set("n", "<leader>fn", "<cmd>Telescope help_tags<CR>")
 keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
 keymap.set("n", "<leader>mt", ":MarkdownPreviewToggle<CR>")
 
+-- trouble
+keymap.set("n", "<leader>d", ":TroubleToggle document_diagnostics<CR>")
+keymap.set("n", "<leader>D", ":TroubleToggle workspace_diagnostics<CR>")
