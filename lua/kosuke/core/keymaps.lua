@@ -53,7 +53,8 @@ keymap.set("n", "th", ":tabp<CR>") -- go to previous tab
 
 keymap.set("n", "<C-a>", "gg<S-v><S-g>")
 
-keymap.set("n", "o", "o<ESC>")
+keymap.set("n", "oi", "o")
+keymap.set("n", "oo", "o<ESC>")
 keymap.set("n", "<S-o>", "<S-o><ESC>")
 
 -- mainly for markdown
