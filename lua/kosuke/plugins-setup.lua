@@ -107,6 +107,11 @@ return packer.startup(function(use)
   -- show diagnostics
   use("folke/trouble.nvim")
 
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+  }
+
   if packer_bootstrap then
     require("packer").sync()
   end
