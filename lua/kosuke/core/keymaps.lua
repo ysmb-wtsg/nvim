@@ -57,6 +57,8 @@ keymap.set("n", "oi", "o")
 keymap.set("n", "oo", "o<ESC>")
 keymap.set("n", "<S-o>", "<S-o><ESC>")
 
+keymap.set("i", "<C-CR>", "<ESC>%%a")
+
 -- mainly for markdown
 keymap.set("i", "っj", "<ESC>")
 keymap.set("i", "　", " ")
