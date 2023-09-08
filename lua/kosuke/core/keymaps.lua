@@ -103,3 +103,4 @@ keymap.set("n", "<leader>D", ":TroubleToggle workspace_diagnostics<CR>")
 
 -- toggle lazygit
 keymap.set("n", "<leader>g", ":LazyGit<CR>")
+keymap.set("n", "<leader>hh", ":LazyGitFilterCurrentFile<CR>")
