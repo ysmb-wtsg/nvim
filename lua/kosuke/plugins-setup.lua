@@ -42,7 +42,7 @@ return packer.startup(function(use)
   -- essential plugins
   use({
     "kylechui/nvim-surround",
-    branh = "main"
+    branch = "main"
   })
   use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
