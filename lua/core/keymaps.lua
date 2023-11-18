@@ -14,7 +14,7 @@ set_to_multimodes("n,v", "j", "gj")
 set_to_multimodes("n,v", "k", "gk")
 set_to_multimodes("n,v", "<S-j>", "15j")
 set_to_multimodes("n,v", "<S-k>", "15k")
-set_to_multimodes("n,v", "<S-h>", "g^")
+set_to_multimodes("n,v", "<S-h>", "0")
 set_to_multimodes("n,v", "<S-l>", "$")
 keymap.set("n", "<Tab>", ">>")
 keymap.set("v", "<Tab>", ">gv")
@@ -104,3 +104,8 @@ keymap.set("n", "<leader>T", ":TroubleToggle workspace_diagnostics<CR>")
 -- toggle lazygit
 keymap.set("n", "<leader>g", ":LazyGit<CR>")
 keymap.set("n", "<leader>hh", ":LazyGitFilterCurrentFile<CR>")
+
+-- bufferline
+vim.keymap.set('n', '<leader>wl', '<cmd>BufferLineCloseRight<CR>')
+vim.keymap.set('n', '<leader>wh', '<cmd>BufferLineCloseLeft<CR>')
+vim.keymap.set('n', '<leader>wp', '<cmd>BufferLinePickClose<CR>')
