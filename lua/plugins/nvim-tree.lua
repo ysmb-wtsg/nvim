@@ -35,5 +35,10 @@ nvimtree.setup({
   },
   view = {
     width = 45
-  }
+  },
+  ui = {
+    confirm = {
+      default_yes = true
+    },
+  },
 })
