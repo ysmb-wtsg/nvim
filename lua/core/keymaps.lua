@@ -111,3 +111,6 @@ vim.keymap.set('n', '<leader>wp', '<cmd>BufferLinePickClose<CR>')
 
 -- zenmode
 vim.keymap.set('n', '<leader>z', '<cmd>ZenMode<CR>')
+
+-- easy action
+vim.keymap.set("n","<leader>a", "<cmd>BasicEasyAction<CR>")

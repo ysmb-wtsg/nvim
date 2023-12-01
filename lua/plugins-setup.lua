@@ -140,6 +140,17 @@ return packer.startup(function(use)
   -- zenmode
   use("folke/zen-mode.nvim")
 
+  -- easy action
+  use {
+    'Weissle/easy-action',
+    requires = {
+      {
+        "kevinhwang91/promise-async",
+        module = { "async" },
+      }
+    }
+  }
+
   if packer_bootstrap then
     require("packer").sync()
   end
