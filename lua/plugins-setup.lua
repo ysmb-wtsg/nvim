@@ -96,7 +96,13 @@ return packer.startup(function(use)
   use("windwp/nvim-ts-autotag")
 
   -- git signs plugin
-  use("lewis6991/gitsigns.nvim")
+  use {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require('gitsigns').setup()
+      require("scrollbar.handlers.gitsigns").setup()
+    end
+  }
 
   -- markdown preview
   use({
@@ -127,6 +133,9 @@ return packer.startup(function(use)
 
   -- neo scroll
   use("karb94/neoscroll.nvim")
+
+  -- scroll bar
+  use("petertriho/nvim-scrollbar")
 
   if packer_bootstrap then
     require("packer").sync()
