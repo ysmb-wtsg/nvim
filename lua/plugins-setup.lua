@@ -119,10 +119,14 @@ return packer.startup(function(use)
       end,
   })
 
+  -- hop
   use {
     'phaazon/hop.nvim',
     branch = 'v2', -- optional but strongly recommended
   }
+
+  -- neo scroll
+  use("karb94/neoscroll.nvim")
 
   if packer_bootstrap then
     require("packer").sync()
