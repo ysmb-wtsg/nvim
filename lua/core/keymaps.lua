@@ -12,8 +12,8 @@ end
 
 set_to_multimodes("n,v", "j", "gj")
 set_to_multimodes("n,v", "k", "gk")
-set_to_multimodes("n,v", "<S-j>", "15j")
-set_to_multimodes("n,v", "<S-k>", "15k")
+-- set_to_multimodes("n,v", "<S-j>", "15j")
+-- set_to_multimodes("n,v", "<S-k>", "15k")
 set_to_multimodes("n,v", "<S-h>", "0")
 set_to_multimodes("n,v", "<S-l>", "$")
 keymap.set("n", "<Tab>", ">>")
@@ -26,12 +26,12 @@ keymap.set("i", "kk", "<ESC>")
 
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
-keymap.set("n", "x", '"_x')
+set_to_multimodes("n,v", "x", '"_x')
 set_to_multimodes("n,v", "c", '"_c')
 keymap.set("n", "<S-c>", '"_C')
 
-keymap.set("n", "+", "<C-a>")
-keymap.set("n", "-", "<C-x>")
+set_to_multimodes("n,v", "+", "<C-a>")
+set_to_multimodes("n,v", "-", "<C-x>")
 
 keymap.set("n", "<leader>w", ":w<CR>")
 keymap.set("n", "<leader>q", ":q<CR>")
@@ -44,12 +44,11 @@ keymap.set("n", "<leader>r", ":e<CR>")
 keymap.set("n", "<leader>R", ":bufdo e<CR>")
 
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
-keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equil width
-keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
+-- keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
+-- keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equil width
 
 keymap.set("n", "tn", ":tabnew<CR>") -- open new tab
-keymap.set("n", "tx", ":tabclose<CR>") -- close current tab
+-- keymap.set("n", "tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "tl", ":tabn<CR>") -- go to next tab
 keymap.set("n", "th", ":tabp<CR>") -- go to previous tab
 
