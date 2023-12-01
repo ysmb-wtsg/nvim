@@ -108,3 +108,6 @@ keymap.set("n", "<leader>hh", ":LazyGitFilterCurrentFile<CR>")
 vim.keymap.set('n', '<leader>wl', '<cmd>BufferLineCloseRight<CR>')
 vim.keymap.set('n', '<leader>wh', '<cmd>BufferLineCloseLeft<CR>')
 vim.keymap.set('n', '<leader>wp', '<cmd>BufferLinePickClose<CR>')
+
+-- zenmode
+vim.keymap.set('n', '<leader>z', '<cmd>ZenMode<CR>')

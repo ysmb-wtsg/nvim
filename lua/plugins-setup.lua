@@ -137,6 +137,9 @@ return packer.startup(function(use)
   -- scroll bar
   use("petertriho/nvim-scrollbar")
 
+  -- zenmode
+  use("folke/zen-mode.nvim")
+
   if packer_bootstrap then
     require("packer").sync()
   end
