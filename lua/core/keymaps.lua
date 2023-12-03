@@ -2,63 +2,32 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
-local function set_to_multimodes (modes, after, before)
-  for mode in string.gmatch(modes, "([^,]+)") do
-    keymap.set(mode, after, before)
-  end
-end
-
--- general keymaps
-
-set_to_multimodes("n,v", "j", "gj")
-set_to_multimodes("n,v", "k", "gk")
-set_to_multimodes("n,v", "<S-j>", "15j")
-set_to_multimodes("n,v", "<S-k>", "15k")
-set_to_multimodes("n,v", "<S-h>", "0")
-set_to_multimodes("n,v", "<S-l>", "$")
-keymap.set("n", "<Tab>", ">>")
-keymap.set("v", "<Tab>", ">gv")
-keymap.set("n", "<S-Tab>", "<<")
-keymap.set("v", "<S-Tab>", "<gv")
-
-keymap.set("i", "jj", "<ESC>")
-keymap.set("i", "kk", "<ESC>")
-
-keymap.set("n", "<leader>nh", ":nohl<CR>")
-
-set_to_multimodes("n,v", "x", '"_x')
-set_to_multimodes("n,v", "c", '"_c')
-keymap.set("n", "<S-c>", '"_C')
-
-set_to_multimodes("n,v", "+", "<C-a>")
-set_to_multimodes("n,v", "-", "<C-x>")
-
-keymap.set("n", "<leader>w", ":w<CR>")
-keymap.set("n", "<leader>q", ":q<CR>")
-keymap.set("n", "<leader>fq", ":q!<CR>") -- !=force
-keymap.set("n", "<leader>jj", ":wq<CR>")
-
-keymap.set("n", "<leader>rp", ":%s/")
-keymap.set("n", "<leader>i", "gg=<S-g>")
-keymap.set("n", "<leader>rf", ":e<CR>")
-
-keymap.set("n", "<leader>s", "<C-w>v") -- split window vertically
--- keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
--- keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equil width
-
-keymap.set("n", "tn", ":tabnew<CR>") -- open new tab
--- keymap.set("n", "tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "tl", ":tabn<CR>") -- go to next tab
-keymap.set("n", "th", ":tabp<CR>") -- go to previous tab
-
+-- normal mode
 keymap.set("n", "<C-a>", "gg<S-v><S-g>")
-
+keymap.set("n", "c", '"_c')
+keymap.set("n", "C", '"_C')
+keymap.set("n", "j", "gj")
+keymap.set("n", "J", "15j")
+keymap.set("n", "k", "gk")
+keymap.set("n", "K", "15k")
+keymap.set("n", "H", "0")
+keymap.set("n", "L", "$")
 keymap.set("n", "oi", "o")
 keymap.set("n", "oo", "o<ESC>")
-keymap.set("n", "<S-o>", "<S-o><ESC>")
+keymap.set("n", "O", "<S-o><ESC>")
+keymap.set("n", "tn", ":tabnew<CR>") -- open new tab
+keymap.set("n", "tl", ":tabn<CR>") -- go to next tab
+keymap.set("n", "th", ":tabp<CR>") -- go to previous tab
+keymap.set("n", "<Tab>", ">>")
+keymap.set("n", "<S-Tab>", "<<")
+keymap.set("n", "x", '"_x')
+keymap.set("n", "+", "<C-a>")
+keymap.set("n", "-", "<C-x>")
 
+-- insert mode
+keymap.set("i", "jj", "<ESC>")
+keymap.set("i", "kk", "<ESC>")
 keymap.set("i", "<C-CR>", "<ESC>%%a")
-
 -- mainly for markdown
 keymap.set("i", "っj", "<ESC>")
 keymap.set("i", "　", " ")
@@ -78,35 +47,40 @@ keymap.set("i", "〜", "~")
 keymap.set("i", "｜", "|")
 keymap.set("i", "：", ":")
 
--- plugin keymaps
+-- visual mode
+keymap.set("v", "c", '"_c')
+keymap.set("v", "j", "gj")
+keymap.set("v", "J", "15j")
+keymap.set("v", "k", "gk")
+keymap.set("v", "K", "15k")
+keymap.set("v", "H", "0")
+keymap.set("v", "L", "$")
+keymap.set("v", "<Tab>", ">gv")
+keymap.set("v", "<S-Tab>", "<gv")
+keymap.set("v", "x", '"_x')
+keymap.set("v", "+", "<C-a>")
+keymap.set("v", "-", "<C-x>")
 
--- nvim-tree
+-- using leader
+keymap.set("n", "<leader>a", "<cmd>BasicEasyAction<CR>")
+keymap.set("n", "<leader>d", "<cmd>lua _lazydocker_toggle()<CR>", {noremap = true, silent = true})
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
-
--- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
 keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
-
--- markdown-preview
-keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
-keymap.set("n", "<leader>mt", ":MarkdownPreviewToggle<CR>")
-
--- trouble
-keymap.set("n", "<leader>t", ":TroubleToggle document_diagnostics<CR>")
-keymap.set("n", "<leader>T", ":TroubleToggle workspace_diagnostics<CR>")
-
--- toggle lazygit
 keymap.set("n", "<leader>g", ":LazyGit<CR>")
 keymap.set("n", "<leader>hh", ":LazyGitFilterCurrentFile<CR>")
-
--- bufferline
-vim.keymap.set('n', '<leader>wl', '<cmd>BufferLineCloseRight<CR>')
-vim.keymap.set('n', '<leader>wh', '<cmd>BufferLineCloseLeft<CR>')
-vim.keymap.set('n', '<leader>wp', '<cmd>BufferLinePickClose<CR>')
-
--- zenmode
-vim.keymap.set('n', '<leader>z', '<cmd>ZenMode<CR>')
-
--- easy action
-vim.keymap.set("n","<leader>a", "<cmd>BasicEasyAction<CR>")
+keymap.set("n", "<leader>i", "gg=<S-g>")
+keymap.set("n", "<leader>jj", ":wq<CR>")
+keymap.set("n", "<leader>hx", ":nohl<CR>")
+keymap.set("n", "<leader>q", ":q<CR>")
+keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
+keymap.set("n", "<leader>mt", ":MarkdownPreviewToggle<CR>")
+keymap.set("n", "<leader>rp", ":%s/")
+keymap.set("n", "<leader>R", ":e<CR>")
+keymap.set("n", "<leader>s", "<C-w>v") -- split window vertically
+keymap.set("n", "<leader>t", ":TroubleToggle document_diagnostics<CR>")
+keymap.set("n", "<leader>T", ":TroubleToggle workspace_diagnostics<CR>")
+keymap.set("n", "<leader>w", ":w<CR>")
+keymap.set("n", "<leader>wp", "<cmd>BufferLinePickClose<CR>")
+keymap.set("n", "<leader>z", '<cmd>ZenMode<CR>')

@@ -45,5 +45,3 @@ local lazydocker = Terminal:new({ cmd = "lazydocker", hidden = true, count = 999
 function _lazydocker_toggle()
   lazydocker:toggle()
 end
-
-vim.api.nvim_set_keymap("n", "<leader>d", "<cmd>lua _lazydocker_toggle()<CR>", {noremap = true, silent = true})
