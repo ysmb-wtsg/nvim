@@ -151,6 +151,15 @@ return packer.startup(function(use)
     }
   }
 
+  -- highlight
+  use {
+    'kevinhwang91/nvim-hlslens',
+    config = function()
+      require('hlslens').setup{
+      }
+    end
+  }
+
   if packer_bootstrap then
     require("packer").sync()
   end
