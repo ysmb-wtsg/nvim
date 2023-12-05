@@ -78,9 +78,10 @@ keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
 keymap.set("n", "<leader>mt", ":MarkdownPreviewToggle<CR>")
 keymap.set("n", "<leader>rp", ":%s/")
 keymap.set("n", "<leader>R", ":e<CR>")
-keymap.set("n", "<leader>s", "<C-w>v") -- split window vertically
+keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
+keymap.set("n", "<leader>sr", ":SessionRestore<CR>") -- split window vertically
 keymap.set("n", "<leader>t", ":TroubleToggle document_diagnostics<CR>")
 keymap.set("n", "<leader>T", ":TroubleToggle workspace_diagnostics<CR>")
-keymap.set("n", "<leader>w", ":w<CR>")
+keymap.set("n", "<leader>w", ":w<CR> :SessionSave<CR>")
 keymap.set("n", "<leader>wp", "<cmd>BufferLinePickClose<CR>")
 keymap.set("n", "<leader>z", '<cmd>ZenMode<CR>')

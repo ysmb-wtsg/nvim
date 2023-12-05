@@ -160,6 +160,17 @@ return packer.startup(function(use)
     end
   }
 
+  -- session manager
+  use {
+    'rmagatti/auto-session',
+    config = function()
+      require("auto-session").setup {
+        log_level = "error",
+        auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
+      }
+    end
+  }
+
   if packer_bootstrap then
     require("packer").sync()
   end
