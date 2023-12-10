@@ -56,6 +56,7 @@ return packer.startup(function(use)
 
   -- fuzzy findings /w telescope
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+  use{ "nvim-telescope/telescope-project.nvim" }
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 
   -- autocompletion
