@@ -35,19 +35,25 @@ return packer.startup(function(use)
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
-  use("szw/vim-maximizer") -- maximizes and restores current window
-
   use("akinsho/toggleterm.nvim") -- toggle terminal
 
-  -- essential plugins
+  -- surround
   use({
     "kylechui/nvim-surround",
-    branch = "main"
+    branch = "main",
+    config = function()
+      require("nvim-surround").setup({})
+    end
   })
+
   use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
-  use("numToStr/Comment.nvim") -- commenting with gc
-
+  -- commenting with gc
+  use{"numToStr/Comment.nvim",
+      config = function()
+        require("Comment").setup({})
+      end
+  }
   use("nvim-tree/nvim-tree.lua") -- file explorer
 
   use("kyazdani42/nvim-web-devicons") -- icons
@@ -133,7 +139,11 @@ return packer.startup(function(use)
   }
 
   -- neo scroll
-  use("karb94/neoscroll.nvim")
+  use{"karb94/neoscroll.nvim",
+      config = function()
+        require("neoscroll").setup({})
+      end
+  }
 
   -- scroll bar
   use("petertriho/nvim-scrollbar")
