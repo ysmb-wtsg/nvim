@@ -152,15 +152,6 @@ return packer.startup(function(use)
     }
   }
 
-  -- highlight
-  use {
-    'kevinhwang91/nvim-hlslens',
-    config = function()
-      require('hlslens').setup{
-      }
-    end
-  }
-
   -- session manager
   use {
     'rmagatti/auto-session',
