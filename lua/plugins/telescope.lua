@@ -33,7 +33,7 @@ telescope.setup({
   extensions = {
     project = {
       base_dirs = {
-        {'~/', max_depth = 3},
+        {'~/', max_depth = 4},
       },
       hidden_files = true, -- default: false
       theme = "dropdown",
