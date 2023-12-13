@@ -29,3 +29,8 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("=")
+
+-- fold setting
+opt.foldmethod = "indent"
+opt.foldcolumn = "1"
+opt.foldlevel = 255
