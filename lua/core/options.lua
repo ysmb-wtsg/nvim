@@ -2,6 +2,7 @@ local opt = vim.opt -- for conciseness
 
 -- line numnbers
 opt.number = true
+opt.relativenumber = true
 
 opt.autoindent = true
 
