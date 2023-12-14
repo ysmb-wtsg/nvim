@@ -24,6 +24,7 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 keymap.set("n", "<leader><leader>", "za")
+keymap.set("n", ";", ":")
 
 -- insert mode
 keymap.set("i", "jj", "<ESC>")

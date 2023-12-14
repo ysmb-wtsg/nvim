@@ -18,6 +18,7 @@ telescope.setup({
     mappings = {
       i = {
         ["<C-o>"] = actions.select_default,
+        ["<C-s>"] = actions.select_vertical,
         ["<C-t>"] = actions.select_tab,
         ["<C-k>"] = actions.move_selection_previous,
         ["<C-j>"] = actions.move_selection_next,
@@ -25,6 +26,7 @@ telescope.setup({
       },
       n = {
         ["o"] = actions.select_default,
+        ["s"] = actions.select_vertical,
         ["t"] = actions.select_tab,
         ["q"] = actions.close,
       }
