@@ -63,6 +63,7 @@ keymap.set("v", "-", "<C-x>")
 
 -- using leader
 keymap.set("n", "<leader>a", "<cmd>BasicEasyAction<CR>")
+keymap.set("n", "<leader>c", "<cmd>ChatGPT<CR>")
 keymap.set("n", "<leader>d", "<cmd>lua _lazydocker_toggle()<CR>", {noremap = true, silent = true})
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
