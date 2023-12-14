@@ -25,9 +25,6 @@ lualine_nightfly.command = {
 }
 
 lualine.setup({
-  options = {
-    theme = lualine_nightfly
-  },
   sections = {
     lualine_a = {
       {
