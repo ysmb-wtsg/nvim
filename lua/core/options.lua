@@ -1,5 +1,10 @@
 local opt = vim.opt -- for conciseness
 
+opt.foldenable = true
+opt.foldcolumn = '0'
+opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+opt.foldlevelstart = 99
+
 -- line numnbers
 opt.number = true
 opt.relativenumber = true
@@ -29,8 +34,3 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("=")
-
--- fold setting
-opt.foldmethod = "indent"
-opt.foldcolumn = "1"
-opt.foldlevel = 255
