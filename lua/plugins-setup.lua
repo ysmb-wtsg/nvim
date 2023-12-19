@@ -197,6 +197,9 @@ return packer.startup(function(use)
       }
   })
 
+  -- note taking
+  use 'gsuuon/note.nvim'
+
   if packer_bootstrap then
     require("packer").sync()
   end
