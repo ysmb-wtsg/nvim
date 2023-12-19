@@ -33,6 +33,8 @@ return packer.startup(function(use)
 
   use("akinsho/nvim-bufferline.lua") -- tab appearance
 
+  -- colorscheme
+  use 'Shatur/neovim-ayu'
   use {"catppuccin/nvim", as = "catppuccin"}
   use "rebelot/kanagawa.nvim"
   use {
@@ -41,23 +43,6 @@ return packer.startup(function(use)
     priority = 1000,
     opts = {},
   }
-  use {
-    'olivercederborg/poimandres.nvim',
-    config = function()
-      require('poimandres').setup {
-        -- leave this setup function empty for default config
-        -- or refer to the configuration section
-        -- for configuration options
-      }
-    end
-  }
-  use({
-    "neanias/everforest-nvim",
-    -- Optional; default configuration will be used if setup isn't called.
-    config = function()
-      require("everforest").setup()
-    end,
-  })
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
