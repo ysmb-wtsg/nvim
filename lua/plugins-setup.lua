@@ -34,7 +34,7 @@ return packer.startup(function(use)
   use("akinsho/nvim-bufferline.lua") -- tab appearance
 
   -- colorscheme
-  use 'Shatur/neovim-ayu'
+  use {'Shatur/neovim-ayu', as = "ayu"}
   use {"catppuccin/nvim", as = "catppuccin"}
   use "rebelot/kanagawa.nvim"
   use {
