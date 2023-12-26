@@ -197,6 +197,9 @@ return packer.startup(function(use)
       }
   })
 
+  -- smart selection
+  use("gcmt/wildfire.vim")
+
   -- note taking
   use 'gsuuon/note.nvim'
 
