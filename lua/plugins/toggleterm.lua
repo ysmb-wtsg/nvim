@@ -1,4 +1,4 @@
-local status, toggleterm = pcall(require, "toggleterm")
+local status, toggleterm = pcall(require, 'toggleterm')
 if not status then
   return
 end
@@ -13,15 +13,15 @@ toggleterm.setup({
   start_in_insert = true,
   insert_mappings = true,
   persist_size = true,
-  direction = "float",
+  direction = 'float',
   close_on_exit = true,
   shell = vim.o.shell,
   float_opts = {
-    border = "curved",
+    border = 'curved',
     winblend = 0,
     highlights = {
-      border = "Normal",
-      background = "Normal",
+      border = 'Normal',
+      background = 'Normal',
     },
   },
 })
@@ -40,7 +40,7 @@ end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 local Terminal  = require('toggleterm.terminal').Terminal
-local lazydocker = Terminal:new({ cmd = "lazydocker", hidden = true, count = 999 })
+local lazydocker = Terminal:new({ cmd = 'lazydocker', hidden = true, count = 999 })
 
 function _lazydocker_toggle()
   lazydocker:toggle()

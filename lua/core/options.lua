@@ -23,14 +23,14 @@ opt.cursorline = true
 
 -- appearance
 opt.termguicolors = true
-opt.background = "dark"
-opt.signcolumn = "yes"
+opt.background = 'dark'
+opt.signcolumn = 'yes'
 
 -- yank to clipboard
-opt.clipboard:append("unnamedplus")
+opt.clipboard:append('unnamedplus')
 
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
 
-opt.iskeyword:append("=")
+opt.iskeyword:append('=')

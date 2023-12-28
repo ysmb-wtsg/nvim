@@ -1,4 +1,4 @@
-local status, tabset = pcall(require, "tabset")
+local status, tabset = pcall(require, 'tabset')
 if not status then
   return
 end
@@ -10,13 +10,13 @@ tabset.setup({
   },
   languages = {
     {
-      filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact", "lua", "json", "yaml" },
+      filetypes = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'lua', 'json', 'yaml' },
       config = {
         tabwidth = 2
       }
     },
     {
-      filetypes = { "markdown"},
+      filetypes = { 'markdown'},
       config = {
         tabwidth = 1
       }

@@ -1,19 +1,19 @@
-local setup, nvimtree = pcall(require, "nvim-tree")
+local setup, nvimtree = pcall(require, 'nvim-tree')
 if not setup then
   return
 end
 
 local function on_attach(bufnr)
-  local api = require("nvim-tree.api")
+  local api = require('nvim-tree.api')
   local function opts(desc)
-    return { desc = "uvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+    return { desc = 'uvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
 
   api.config.mappings.default_on_attach(bufnr)
-  vim.keymap.del("n", "<C-t>", { buffer = bufnr })
-  vim.keymap.set("n", "t", api.node.open.tab, opts("Open: New Tab"))
-  vim.keymap.set("n", "o", api.node.open.edit, opts("Open"))
-  vim.keymap.set("n", "s", api.node.open.vertical, opts("Open: Vertical Split"))
+  vim.keymap.del('n', '<C-t>', { buffer = bufnr })
+  vim.keymap.set('n', 't', api.node.open.tab, opts('Open: New Tab'))
+  vim.keymap.set('n', 'o', api.node.open.edit, opts('Open'))
+  vim.keymap.set('n', 's', api.node.open.vertical, opts('Open: Vertical Split'))
 end
 
 -- recommended settings from nvim-tree documentation

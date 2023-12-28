@@ -1,4 +1,4 @@
-local status, ufo = pcall(require, "ufo")
+local status, ufo = pcall(require, 'ufo')
 if not status then
   return
 end

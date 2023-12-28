@@ -1,20 +1,20 @@
-local status, bufferline = pcall(require, "bufferline")
+local status, bufferline = pcall(require, 'bufferline')
 if not status then
   return
 end
 
 bufferline.setup({
   options = {
-    mode = "tabs",
+    mode = 'tabs',
     separator_style = 'slant',
     always_show_bufferline = false,
     show_buffer_close_icons = false,
     show_close_icon = false,
     color_icons = true,
-    diagnostics = "nvim_lsp",
+    diagnostics = 'nvim_lsp',
     diagnostics_indicator = function(count, level)
-      local icon = level:match("error") and " " or " "
-      return " " .. icon .. count
+      local icon = level:match('error') and ' ' or ' '
+      return ' ' .. icon .. count
     end
   },
   highlights = {
@@ -31,7 +31,7 @@ bufferline.setup({
     },
     buffer_selected = {
       guifg = '#fdf6e3',
-      gui = "bold",
+      gui = 'bold',
     },
     fill = {
       guibg = '#073642'
