@@ -204,6 +204,20 @@ return packer.startup(function(use)
   -- note taking
   use 'gsuuon/note.nvim'
 
+  -- noice
+  use{
+    "folke/noice.nvim",
+    -- config = function()
+    -- require("noice").setup({
+          -- add any options here
+    -- })
+    -- end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+      }
+  }
+
   if packer_bootstrap then
     require('packer').sync()
   end
