@@ -1,6 +1,8 @@
 vim.g.mapleader = ' '
 
-local keymap = vim.keymap -- for conciseness
+-- for conciseness
+local keymap = vim.keymap
+local silent = {silent = true}
 
 -- normal mode
 keymap.set('n', '<C-a>', 'gg<S-v><S-g>')
@@ -51,6 +53,8 @@ keymap.set('i', '：', ':')
 
 -- visual mode
 keymap.set('v', 'c', '"_c')
+keymap.set('v', 'g+', 'g<C-a>gv')
+keymap.set('v', 'g-', 'g<C-x>gv')
 keymap.set('v', 'j', 'gj')
 keymap.set('v', 'J', '15j')
 keymap.set('v', 'k', 'gk')
@@ -60,35 +64,35 @@ keymap.set('v', 'L', '$')
 keymap.set('v', '<Tab>', '>gv')
 keymap.set('v', '<S-Tab>', '<gv')
 keymap.set('v', 'x', '"_x')
-keymap.set('v', '+', '<C-a>')
-keymap.set('v', '-', '<C-x>')
+keymap.set('v', '+', '<C-a>gv')
+keymap.set('v', '-', '<C-x>gv')
 
 -- using leader
-keymap.set('n', '<leader>a', '<cmd>BasicEasyAction<CR>')
-keymap.set('n', '<leader>c', '<cmd>ChatGPT<CR>')
-keymap.set('n', '<leader>d', '<cmd>lua _lazydocker_toggle()<CR>', {noremap = true, silent = true})
-keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
-keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<CR>')
-keymap.set('n', '<leader>fc', '<cmd>Telescope colorscheme<CR>')
-keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>')
-keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<CR>')
-keymap.set('n', '<leader>fp', '<cmd>Telescope project<CR>')
-keymap.set('n', '<leader>g', ':LazyGit<CR>')
-keymap.set('n', '<leader>hh', ':LazyGitFilterCurrentFile<CR>')
-keymap.set('n', '<leader>i', 'gg=<S-g>')
-keymap.set('n', '<leader>jj', ':wq<CR>')
-keymap.set('n', '<leader>hx', ':nohl<CR>')
-keymap.set('n', '<leader>q', ':q<CR>')
-keymap.set('n', '<leader>n', ':Note')
-keymap.set('n', '<leader>mp', ':MarkdownPreview<CR>')
-keymap.set('n', '<leader>mt', ':MarkdownPreviewToggle<CR>')
+keymap.set('n', '<leader>a', '<cmd>BasicEasyAction<CR>', silent)
+keymap.set('n', '<leader>c', '<cmd>ChatGPT<CR>', silent)
+keymap.set('n', '<leader>d', '<cmd>lua _lazydocker_toggle()<CR>', silent)
+keymap.set('n', '<leader>e', '<cmd>NvimTreeFindFileToggle<CR>', silent)
+keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<CR>', silent)
+keymap.set('n', '<leader>fc', '<cmd>Telescope colorscheme<CR>', silent)
+keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>', silent)
+keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', silent)
+keymap.set('n', '<leader>fp', '<cmd>Telescope project<CR>', silent)
+keymap.set('n', '<leader>g', '<cmd>LazyGit<CR>', silent)
+keymap.set('n', '<leader>hh', '<cmd>LazyGitFilterCurrentFile<CR>', silent)
+keymap.set('n', '<leader>i', 'gg=<S-g><C-o>', silent)
+keymap.set('n', '<leader>jj', '<cmd>wq<CR>', silent)
+keymap.set('n', '<leader>hx', '<cmd>nohl<CR>', silent)
+keymap.set('n', '<leader>q', '<cmd>q<CR>', silent)
+keymap.set('n', '<leader>n', ':Note ')
+keymap.set('n', '<leader>mp', '<cmd>MarkdownPreview<CR>', silent)
+keymap.set('n', '<leader>mt', '<cmd>MarkdownPreviewToggle<CR>', silent)
 keymap.set('n', '<leader>rp', ':%s/')
-keymap.set('n', '<leader>R', ':e<CR>')
-keymap.set('n', '<leader>sv', '<C-w>v') -- split window vertically
-keymap.set('n', '<leader>sr', ':SessionRestore<CR>') -- split window vertically
-keymap.set('n', '<leader>t', ':TroubleToggle document_diagnostics<CR>')
-keymap.set('n', '<leader>T', ':TroubleToggle workspace_diagnostics<CR>')
-keymap.set('n', '<leader>w', ':w<CR> :SessionSave<CR>')
-keymap.set('n', '<leader>wp', '<cmd>BufferLinePickClose<CR>')
-keymap.set('n', '<leader>z', '<cmd>ZenMode<CR>')
-keymap.set('n', '/', '<cmd>Telescope current_buffer_fuzzy_find<CR>')
+keymap.set('n', '<leader>rf', '<cmd>e<CR>', silent)
+keymap.set('n', '<leader>sv', '<C-w>v', silent) -- split window vertically
+keymap.set('n', '<leader>sr', '<cmd>SessionRestore<CR>', silent) -- split window vertically
+keymap.set('n', '<leader>t', '<cmd>TroubleToggle document_diagnostics<CR>', silent)
+keymap.set('n', '<leader>T', '<cmd>TroubleToggle workspace_diagnostics<CR>', silent)
+keymap.set('n', '<leader>w', '<cmd>w<CR><cmd>SessionSave<CR>', silent)
+keymap.set('n', '<leader>wp', '<cmd>BufferLinePickClose<CR>', silent)
+keymap.set('n', '<leader>z', '<cmd>ZenMode<CR>', silent)
+keymap.set('n', '/', '<cmd>Telescope current_buffer_fuzzy_find<CR>', silent)
