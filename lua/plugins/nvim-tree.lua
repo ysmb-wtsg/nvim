@@ -10,10 +10,10 @@ local function on_attach(bufnr)
   end
 
   api.config.mappings.default_on_attach(bufnr)
-  vim.keymap.del('n', '<C-t>', { buffer = bufnr })
   vim.keymap.set('n', 't', api.node.open.tab, opts('Open: New Tab'))
   vim.keymap.set('n', 'o', api.node.open.edit, opts('Open'))
   vim.keymap.set('n', 's', api.node.open.vertical, opts('Open: Vertical Split'))
+  vim.keymap.set('n', 'w', api.node.navigate.parent_close, opts('Close Directory'))
 end
 
 -- recommended settings from nvim-tree documentation
