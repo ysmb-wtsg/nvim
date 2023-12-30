@@ -93,7 +93,6 @@ return packer.startup(function(use)
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
 	use({ "nvimdev/lspsaga.nvim", branch = "main" })
-	use("jose-elias-alvarez/typescript.nvim")
 	use("onsails/lspkind.nvim")
 
 	-- configuring lsp server
