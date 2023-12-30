@@ -40,8 +40,13 @@ end
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
 local Terminal = require("toggleterm.terminal").Terminal
-local lazydocker = Terminal:new({ cmd = "lazydocker", hidden = true, count = 999 })
+local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, count = 999 })
+local lazydocker = Terminal:new({ cmd = "lazydocker", hidden = true, count = 998 })
 
-function _lazydocker_toggle()
+function Lazygit_toggle()
+	lazygit:toggle()
+end
+
+function Lazydocker_toggle()
 	lazydocker:toggle()
 end

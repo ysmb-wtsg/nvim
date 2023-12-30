@@ -134,18 +134,6 @@ return packer.startup(function(use)
 	-- show diagnostics
 	use("folke/trouble.nvim")
 
-	-- toggle lazygit
-	use({
-		"kdheepak/lazygit.nvim",
-		requires = {
-			"nvim-telescope/telescope.nvim",
-			"nvim-lua/plenary.nvim",
-		},
-		config = function()
-			require("telescope").load_extension("lazygit")
-		end,
-	})
-
 	-- hop
 	use({
 		"phaazon/hop.nvim",
