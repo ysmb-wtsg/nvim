@@ -4,6 +4,7 @@ if not setup then
   return
 end
 
+
 -- for conciseness
 local formatting = null_ls.builtins.formatting -- to setup formatters
 local diagnostics = null_ls.builtins.diagnostics -- to setup linters
@@ -11,20 +12,15 @@ local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 -- to setup format on save
 local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 
--- configure null_ls
 null_ls.setup({
-  -- setup formatters & linters
   sources = {
-    --  to disable file types use
-    --  'formatting.prettier.with({disabled_filetypes = {}})' (see null-ls docs)
-    formatting.prettier, -- js/ts formatter
-    formatting.stylua, -- lua formatter
-    formatting.autopep8, -- python formatter
-    diagnostics.flake8, -- python linter
-    diagnostics.eslint_d.with({ -- js/ts linter
-      -- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
+    formatting.prettier,
+    formatting.stylua,
+    formatting.autopep8,
+    diagnostics.flake8,
+    diagnostics.eslint_d.with({
       condition = function(utils)
-        return utils.root_has_file('.eslintrc.js') -- change file extension if you use something else
+        return utils.root_has_file('.eslintrc.js')
       end,
     }),
   },
@@ -36,13 +32,7 @@ null_ls.setup({
         group = augroup,
         buffer = bufnr,
         callback = function()
-          vim.lsp.buf.format({
-            filter = function(client)
-              --  only use null-ls for formatting instead of lsp server
-              return client.name == 'null-ls'
-            end,
-            bufnr = bufnr,
-          })
+          vim.lsp.buf.format({ async = false })
         end,
       })
     end
