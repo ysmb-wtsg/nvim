@@ -1,7 +1,7 @@
 local opt = vim.opt -- for conciseness
 
 opt.foldenable = true
-opt.foldcolumn = '0'
+opt.foldcolumn = "0"
 opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 opt.foldlevelstart = 99
 
@@ -23,14 +23,14 @@ opt.cursorline = true
 
 -- appearance
 opt.termguicolors = true
-opt.background = 'dark'
-opt.signcolumn = 'yes'
+opt.background = "dark"
+opt.signcolumn = "yes"
 
 -- yank to clipboard
-opt.clipboard:append('unnamedplus')
+opt.clipboard:append("unnamedplus")
 
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
 
-opt.iskeyword:append('=')
+opt.iskeyword:append("=")

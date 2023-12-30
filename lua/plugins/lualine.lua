@@ -1,16 +1,16 @@
-local status, lualine = pcall(require, 'lualine')
+local status, lualine = pcall(require, "lualine")
 if not status then
-  return
+	return
 end
 
 lualine.setup({
-  sections = {
-    lualine_z = {
-      {
-        'datetime',
-        -- options: default, us, uk, iso, or your own format string ("%H:%M", etc..)
-        style = '%Y/%m/%d(%A) %H:%M'
-      }
-    }
-  }
+	sections = {
+		lualine_z = {
+			{
+				"datetime",
+				-- options: default, us, uk, iso, or your own format string ("%H:%M", etc..)
+				style = "%Y/%m/%d(%A) %H:%M",
+			},
+		},
+	},
 })

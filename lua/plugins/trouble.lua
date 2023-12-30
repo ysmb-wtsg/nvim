@@ -1,10 +1,10 @@
-local status, trouble = pcall(require, 'trouble')
+local status, trouble = pcall(require, "trouble")
 if not status then
-  return
+	return
 end
 
 trouble.setup({
-  action_keys = {
-    open_tab = { 't' }
-  }
+	action_keys = {
+		open_tab = { "t" },
+	},
 })
