@@ -97,6 +97,7 @@ mason_null_ls.setup({
 		"autopep8",
 		"flake8",
 		"eslint_d",
+		"markdown-toc",
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
