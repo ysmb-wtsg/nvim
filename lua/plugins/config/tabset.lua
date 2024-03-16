@@ -18,7 +18,7 @@ tabset.setup({
 		{
 			filetypes = { "markdown" },
 			config = {
-				tabwidth = 1,
+				tabwidth = 2,
 			},
 		},
 	},
