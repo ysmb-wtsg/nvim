@@ -53,9 +53,9 @@ local insert = luasnip.insert_node
 luasnip.add_snippets(nil, {
 	markdown = {
 		snip({
-			trig = "|",
+			trig = "sample",
 		}, {
-			txt({ "||||", "|:--|:--|:--|", "||||" }),
+			txt({ "this is nvim snip sample." }),
 			insert(0),
 		}),
 	},
