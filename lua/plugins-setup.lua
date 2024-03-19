@@ -167,7 +167,6 @@ return packer.startup(function(use)
 			"nvim-telescope/telescope.nvim",
 		},
 	})
-	use("gcmt/wildfire.vim")
 	use("gsuuon/note.nvim")
 	use({
 		"epwalsh/obsidian.nvim",
@@ -175,6 +174,14 @@ return packer.startup(function(use)
 		requires = {
 			"nvim-lua/plenary.nvim",
 		},
+	})
+	use({
+		"sustech-data/wildfire.nvim",
+		lazy = true,
+		requires = { "nvim-treesitter/nvim-treesitter" },
+		config = function()
+			require("wildfire").setup()
+		end,
 	})
 
 	if packer_bootstrap then
