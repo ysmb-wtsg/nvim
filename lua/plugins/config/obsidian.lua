@@ -9,4 +9,10 @@ obsidian.setup({
       path = "~/",
     },
   },
+  ui = {
+    checkboxes = {
+      [" "] = { char = "🥚", hl_group = "ObsidianTodo" },
+      ["x"] = { char = "🐣", hl_group = "ObsidianDone" },
+    },
+  },
 })
