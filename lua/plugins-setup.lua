@@ -36,6 +36,7 @@ return packer.startup(function(use)
 		priority = 1000,
 		opts = {},
 	})
+	use("olivercederborg/poimandres.nvim")
 
 	-- LSP
 	use("neovim/nvim-lspconfig")
