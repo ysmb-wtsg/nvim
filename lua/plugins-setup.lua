@@ -103,6 +103,7 @@ return packer.startup(function(use)
 			require("scrollbar.handlers.gitsigns").setup()
 		end,
 	})
+	use("sindrets/diffview.nvim")
 
 	-- util
 	use("nvim-lua/plenary.nvim")

@@ -18,9 +18,6 @@ gitsigns.setup({
 
 		map("n", "<leader>hr", gs.reset_hunk)
 		map("n", "<leader>hR", gs.reset_buffer)
-		map("n", "<leader>hd", function()
-			gs.diffthis("~")
-		end)
 		map("n", "<leader>th", gs.toggle_deleted)
 		map("n", "<leader>hn", function()
 			if vim.wo.diff then

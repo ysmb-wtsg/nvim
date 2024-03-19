@@ -20,6 +20,7 @@ keymap.set("n", "O", "<S-o><ESC>")
 keymap.set("n", "tn", ":tabnew<CR>") -- open new tab
 keymap.set("n", "tl", ":tabn<CR>") -- go to next tab
 keymap.set("n", "th", ":tabp<CR>") -- go to previous tab
+keymap.set("n", "tx", ":tabc<CR>") -- close current tab
 keymap.set("n", "<Tab>", ">>")
 keymap.set("n", "<S-Tab>", "<<")
 keymap.set("n", "x", '"_x')
@@ -78,7 +79,8 @@ keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", silent)
 keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", silent)
 keymap.set("n", "<leader>fp", "<cmd>Telescope project<CR>", silent)
 keymap.set("n", "<leader>g", "<cmd>lua Lazygit_toggle()<CR>", silent)
-keymap.set("n", "<leader>hh", "<cmd>LazyGitFilterCurrentFile<CR>", silent)
+keymap.set("n", "<leader>hd", "<cmd>DiffviewOpen HEAD~1<CR>", silent)
+keymap.set("n", "<leader>hf", "<cmd>DiffviewFileHistory<CR>", silent)
 keymap.set("n", "<leader>jj", "<cmd>wq<CR>", silent)
 keymap.set("n", "<leader>hx", "<cmd>nohl<CR>", silent)
 keymap.set("n", "<leader>q", "<cmd>q<CR>", silent)
