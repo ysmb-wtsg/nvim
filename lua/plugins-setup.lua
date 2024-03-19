@@ -168,6 +168,13 @@ return packer.startup(function(use)
 	})
 	use("gcmt/wildfire.vim")
 	use("gsuuon/note.nvim")
+	use({
+		"epwalsh/obsidian.nvim",
+		tag = "*", -- recommended, use latest release instead of latest commit
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()
