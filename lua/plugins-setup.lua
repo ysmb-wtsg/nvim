@@ -173,6 +173,7 @@ return packer.startup(function(use)
 		end,
 	})
 	use({ "nvim-treesitter/nvim-treesitter-context" })
+	use("RRethy/vim-illuminate")
 
 	if packer_bootstrap then
 		require("packer").sync()
