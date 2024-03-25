@@ -6,7 +6,6 @@ end
 
 -- for conciseness
 local formatting = null_ls.builtins.formatting -- to setup formatters
-local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 
 -- to setup format on save
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -15,8 +14,6 @@ null_ls.setup({
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
-		formatting.autopep8,
-		diagnostics.flake8,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)
