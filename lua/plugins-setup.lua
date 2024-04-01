@@ -147,15 +147,7 @@ return packer.startup(function(use)
 			},
 		},
 	})
-	use({
-		"rmagatti/auto-session",
-		config = function()
-			require("auto-session").setup({
-				log_level = "error",
-				auto_session_suppress_dirs = "~/",
-			})
-		end,
-	})
+  use("rmagatti/auto-session")
 	use("gsuuon/note.nvim")
 	use({
 		"epwalsh/obsidian.nvim",
