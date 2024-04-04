@@ -147,7 +147,7 @@ return packer.startup(function(use)
 			},
 		},
 	})
-  use("rmagatti/auto-session")
+	use("rmagatti/auto-session")
 	use("gsuuon/note.nvim")
 	use({
 		"epwalsh/obsidian.nvim",
@@ -166,6 +166,13 @@ return packer.startup(function(use)
 	})
 	use({ "nvim-treesitter/nvim-treesitter-context" })
 	use("RRethy/vim-illuminate")
+	use({
+		"folke/todo-comments.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("todo-comments").setup()
+		end,
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()

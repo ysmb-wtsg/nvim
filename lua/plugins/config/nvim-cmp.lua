@@ -51,11 +51,11 @@ local snip = luasnip.snippet
 local txt = luasnip.text_node
 local insert = luasnip.insert_node
 luasnip.add_snippets(nil, {
-	markdown = {
+	all = {
 		snip({
-			trig = "sample",
+			trig = "todo",
 		}, {
-			txt({ "this is nvim snip sample." }),
+			txt({ "TODO: " }),
 			insert(0),
 		}),
 	},
