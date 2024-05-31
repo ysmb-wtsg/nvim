@@ -13,7 +13,6 @@ return {
 			vim.keymap.set("n", "<leader>lr", "<cmd>Lspsaga incoming_calls<CR>", opts),
 			vim.keymap.set("n", "<leader>ld", "<cmd>Lspsaga outgoing_calls<CR>", opts),
 			vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts),
-			vim.keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts),
 		})
 	end,
 }
