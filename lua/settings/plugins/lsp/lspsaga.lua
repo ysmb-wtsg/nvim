@@ -7,11 +7,10 @@ return {
 	config = function()
 		local opts = { noremap = true, silent = true }
 		require("lspsaga").setup({
-			vim.keymap.set("n", "<leader>lf", "<cmd>Lspsaga finder def+ref ++layout<CR>", opts),
-			vim.keymap.set("n", "<leader>lh", "<cmd>Lspsaga hover_doc<CR>", opts),
-			vim.keymap.set("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", opts),
-			vim.keymap.set("n", "<leader>lr", "<cmd>Lspsaga incoming_calls<CR>", opts),
-			vim.keymap.set("n", "<leader>ld", "<cmd>Lspsaga outgoing_calls<CR>", opts),
+			vim.keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts),
+			vim.keymap.set("n", "gf", "<cmd>Lspsaga finder def+ref ++layout<CR>", opts),
+			vim.keymap.set("n", "gh", "<cmd>Lspsaga hover_doc<CR>", opts),
+			vim.keymap.set("n", "go", "<cmd>Lspsaga outline<CR>", opts),
 			vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts),
 		})
 	end,
