@@ -57,4 +57,3 @@ keymap.set("n", "<leader>rp", ":%s/")
 keymap.set("n", "<leader>rf", "<cmd>e<CR>", silent)
 keymap.set("n", "<leader>sv", "<C-w>v", silent) -- split window vertically
 keymap.set("n", "<leader>w", "<cmd>w<CR><cmd>SessionSave<CR>", silent)
-keymap.set("n", "<leader>wp", "<cmd>BufferLinePickClose<CR>", silent)

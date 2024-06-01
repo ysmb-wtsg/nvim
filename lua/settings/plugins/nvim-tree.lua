@@ -1,9 +1,12 @@
 return {
 	"nvim-tree/nvim-tree.lua",
-	dependencies = "nvim-tree/nvim-web-devicons",
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
+	},
 	config = function()
 		local function on_attach(bufnr)
 			local api = require("nvim-tree.api")
+
 			local function opts(desc)
 				return { desc = "uvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
 			end
@@ -31,6 +34,17 @@ return {
 				ignore = false,
 			},
 			view = {
+				-- float = {
+				-- 	enable = true,
+				-- 	open_win_config = {
+				-- 		relative = "editor",
+				-- 		width = 60,
+				-- 		-- width = 125,
+				-- 		height = 30,
+				-- 		row = 4,
+				-- 		col = 9,
+				-- 	},
+				-- },
 				relativenumber = true,
 				width = 35,
 			},
