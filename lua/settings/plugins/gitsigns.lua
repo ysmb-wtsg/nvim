@@ -1,5 +1,6 @@
 return {
 	"lewis6991/gitsigns.nvim",
+	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		require("scrollbar.handlers.gitsigns").setup()
 		local gitsigns = require("gitsigns")

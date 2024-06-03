@@ -1,5 +1,10 @@
 return {
 	"rmagatti/auto-session",
+	lazy = true,
+	keys = {
+		{ "<leader>w", "<cmd>w<CR><cmd>SessionSave<CR>", { silent = true } },
+		{ "<leader>sr", "<cmd>SessionRestore<CR>", { silent = true } },
+	},
 	config = function()
 		local autosession = require("auto-session")
 		autosession.setup({
@@ -11,6 +16,5 @@ return {
 			auto_save_enabled = false,
 			auto_restore_enabled = true,
 		})
-		vim.keymap.set("n", "<leader>sr", "<cmd>SessionRestore<CR>", { silent = true }) -- split window vertically
 	end,
 }

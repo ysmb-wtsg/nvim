@@ -1,5 +1,6 @@
 return {
 	"RRethy/vim-illuminate",
+	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local highlights = {
 			IlluminatedWord = { link = "Visual" },

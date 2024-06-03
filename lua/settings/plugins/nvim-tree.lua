@@ -1,5 +1,6 @@
 return {
 	"nvim-tree/nvim-tree.lua",
+	keys = { vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFindFileToggle<CR>", { silent = true }) },
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
@@ -54,6 +55,5 @@ return {
 				},
 			},
 		})
-		vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFindFileToggle<CR>", { silent = true })
 	end,
 }

@@ -25,7 +25,6 @@ keymap.set("n", "<S-Tab>", "<<")
 keymap.set("n", "x", '"_x')
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
-keymap.set("n", "<leader><leader>", "za")
 keymap.set("n", ";", ":")
 
 -- insert mode
@@ -56,4 +55,3 @@ keymap.set("n", "<leader>rp", ":%s/")
 keymap.set("n", "<leader>rf", "<cmd>e<CR>", silent)
 keymap.set("n", "<leader>sv", "<C-w>v", silent) -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s", silent) -- split window vertically
-keymap.set("n", "<leader>w", "<cmd>w<CR><cmd>SessionSave<CR>", silent)

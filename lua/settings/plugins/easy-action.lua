@@ -6,6 +6,10 @@ return {
 			module = { "async" },
 		},
 	},
+	lazy = true,
+	keys = {
+		{ "<leader>a", "<cmd>BasicEasyAction<CR>", { silent = true } },
+	},
 	config = function()
 		local easy_action = require("easy-action")
 		easy_action.setup({
@@ -54,6 +58,5 @@ return {
 			jump_back_delay_ms = 1,
 			feed_delay_ms = 1,
 		})
-		vim.keymap.set("n", "<leader>a", "<cmd>BasicEasyAction<CR>", { silent = true })
 	end,
 }

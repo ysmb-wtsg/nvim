@@ -1,6 +1,6 @@
 return {
 	"echasnovski/mini.animate",
-	event = "VeryLazy",
+	event = { "BufReadPre", "BufNewFile" },
 	opts = function(_, opts)
 		opts.scroll = {
 			enable = false,
