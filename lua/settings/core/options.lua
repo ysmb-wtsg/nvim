@@ -36,3 +36,5 @@ opt.splitbelow = true
 opt.iskeyword:append("=")
 
 opt.conceallevel = 1
+
+opt.laststatus = 3

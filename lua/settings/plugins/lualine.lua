@@ -9,8 +9,8 @@ return {
 		-- configure lualine with modified theme
 		lualine.setup({
 			options = {
-				disabled_filetypes = { "NvimTree" },
 				theme = my_theme,
+				globalstatus = true,
 			},
 			sections = {
 				lualine_c = {},
