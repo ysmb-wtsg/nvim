@@ -15,9 +15,9 @@ return {
 					vim.keymap.set(mode, l, r, opts)
 				end
 
-				map("n", "<leader>hr", gs.reset_hunk)
-				map("n", "<leader>hR", gs.reset_buffer)
-				map("n", "<leader>ht", gs.toggle_deleted)
+				map("n", "<leader>hr", gs.reset_hunk, { desc = "Reset hunk in current line" })
+				map("n", "<leader>hR", gs.reset_buffer, { desc = "Reset hunk in current buffer" })
+				map("n", "<leader>ht", gs.toggle_deleted, { desc = "Toggle deleted hunk" })
 				map("n", "<leader>hn", function()
 					if vim.wo.diff then
 						return "]c"
@@ -26,7 +26,7 @@ return {
 						gs.next_hunk()
 					end)
 					return "<Ignore>"
-				end, { expr = true })
+				end, { expr = true, desc = "Jump to next hunk" })
 				map("n", "<leader>hp", function()
 					if vim.wo.diff then
 						return "[c"
@@ -35,7 +35,7 @@ return {
 						gs.prev_hunk()
 					end)
 					return "<Ignore>"
-				end, { expr = true })
+				end, { expr = true, desc = "Jump to previous hunk" })
 			end,
 			current_line_blame_opts = {
 				virt_text = true,

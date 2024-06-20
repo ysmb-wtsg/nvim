@@ -8,7 +8,7 @@ return {
 	},
 	lazy = true,
 	keys = {
-		{ "<leader>a", "<cmd>BasicEasyAction<CR>", { silent = true } },
+		{ "<leader>a", "<cmd>BasicEasyAction<CR>", silent = true, desc = "EasyAction" },
 	},
 	config = function()
 		local easy_action = require("easy-action")

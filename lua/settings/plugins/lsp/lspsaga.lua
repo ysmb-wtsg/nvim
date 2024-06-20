@@ -1,16 +1,14 @@
 return {
 	"nvimdev/lspsaga.nvim",
+	keys = {
+		{ "gd", "<cmd>Lspsaga goto_definition<CR>", silent = true, desc = "Go to definition" },
+		{ "gf", "<cmd>Lspsaga finder def+ref ++layout<CR>", silent = true, desc = "Show definition and references" },
+		{ "go", "<cmd>Lspsaga outline<CR>", silent = true, desc = "Show outline" },
+		{ "<leader>ca", "<cmd>Lspsaga code_action<CR>", silent = true, desc = "Show available code actions" },
+	},
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter", -- optional
 		"nvim-tree/nvim-web-devicons", -- optional
 	},
-	config = function()
-		local opts = { noremap = true, silent = true }
-		require("lspsaga").setup({
-			vim.keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts),
-			vim.keymap.set("n", "gf", "<cmd>Lspsaga finder def+ref ++layout<CR>", opts),
-			vim.keymap.set("n", "go", "<cmd>Lspsaga outline<CR>", opts),
-			vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts),
-		})
-	end,
+	opts = {},
 }

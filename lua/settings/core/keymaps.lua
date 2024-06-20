@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 
 -- for conciseness
 local keymap = vim.keymap
-local silent = { silent = true }
 
 -- normal mode
 keymap.set("n", "<C-a>", "gg<S-v><S-g>")
@@ -14,12 +13,12 @@ keymap.set("n", "k", "gk")
 keymap.set("n", "K", "<C-u>")
 keymap.set("n", "H", "0")
 keymap.set("n", "L", "$")
-keymap.set("n", "oi", "o")
-keymap.set("n", "oo", "o<ESC>")
+keymap.set("n", "oi", "o", { desc = "Insert a blank line in InsertMode" })
+keymap.set("n", "oo", "o<ESC>", { desc = "Insert a blank line in NormalMode" })
 keymap.set("n", "O", "<S-o><ESC>")
-keymap.set("n", "tn", "<C-w>T")
-keymap.set("n", "tl", ":tabn<CR>", silent)
-keymap.set("n", "th", ":tabp<CR>", silent)
+keymap.set("n", "tn", "<C-w>T", { desc = "Open current buffer in new tab" })
+keymap.set("n", "tl", ":tabn<CR>", { silent = true, desc = "Next tab" })
+keymap.set("n", "th", ":tabp<CR>", { silent = true, desc = "Previous tab" })
 keymap.set("n", "<Tab>", ">>")
 keymap.set("n", "<S-Tab>", "<<")
 keymap.set("n", "x", '"_x')
@@ -29,7 +28,6 @@ keymap.set("n", ";", ":")
 
 -- insert mode
 keymap.set("i", "jj", "<ESC>")
-keymap.set("i", "jk", "<ESC>")
 keymap.set("i", "<C-CR>", "<ESC>%%a")
 
 -- visual mode
@@ -49,9 +47,9 @@ keymap.set("v", "+", "<C-a>gv")
 keymap.set("v", "-", "<C-x>gv")
 
 -- using leader
-keymap.set("n", "<leader>hx", "<cmd>nohl<CR>", silent)
-keymap.set("n", "<leader>q", "<cmd>q<CR>", silent)
-keymap.set("n", "<leader>rp", ":%s/")
-keymap.set("n", "<leader>rf", "<cmd>e<CR>", silent)
-keymap.set("n", "<leader>sv", "<C-w>v", silent) -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s", silent) -- split window vertically
+keymap.set("n", "<leader>hx", "<cmd>nohl<CR>", { silent = true, desc = "Disable hilight" })
+keymap.set("n", "<leader>q", "<cmd>q<CR>", { silent = true, desc = "Close buffer" })
+keymap.set("n", "<leader>rp", ":%s/", { silent = true, desc = "Replace" })
+keymap.set("n", "<leader>rf", "<cmd>e<CR>", { silent = true, desc = "Refresh buffer" })
+keymap.set("n", "<leader>sv", "<C-w>v", { silent = true, desc = "Split vertically" }) -- split window vertically
+keymap.set("n", "<leader>sh", "<C-w>s", { silent = true, desc = "Disable split horizontally" }) -- split window vertically

@@ -2,9 +2,9 @@ return {
 	"sindrets/diffview.nvim",
 	lazy = true,
 	keys = {
-		{ "<leader>vd", "<cmd>DiffviewOpen<CR>", { silent = true } },
-		{ "<leader>vh", "<cmd>DiffviewOpen HEAD~1<CR>", { silent = true } },
-		{ "<leader>vf", "<cmd>DiffviewFileHistory %<CR>", { silent = true } },
+		{ "<leader>vd", "<cmd>DiffviewOpen<CR>", silent = true, desc = "Open DiffView of current changes" },
+		{ "<leader>vh", "<cmd>DiffviewOpen HEAD~1<CR>", silent = true, desc = "Open DiffView between HEAD~1 " },
+		{ "<leader>vf", "<cmd>DiffviewFileHistory %<CR>", silent = true, desc = "Open FileHistory" },
 	},
 	config = function()
 		-- Lua
@@ -106,7 +106,7 @@ return {
 					{
 						"n",
 						"<leader>vq",
-            "<cmd>tabclose<CR>",
+						"<cmd>tabclose<CR>",
 						{ desc = "Close panel" },
 					},
 					{
@@ -251,7 +251,7 @@ return {
 					{
 						"n",
 						"<leader>vq",
-            "<cmd>tabclose<CR>",
+						"<cmd>tabclose<CR>",
 						{ desc = "Close panel" },
 					},
 					{

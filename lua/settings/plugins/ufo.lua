@@ -2,7 +2,7 @@ return {
 	"kevinhwang91/nvim-ufo",
 	dependencies = "kevinhwang91/promise-async",
 	keys = {
-		{ "<leader><leader>", "za" },
+		{ "<leader><leader>", "za", desc = "Fold" },
 	},
 	config = function()
 		local handler = function(virtText, lnum, endLnum, width, truncate)

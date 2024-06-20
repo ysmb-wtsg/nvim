@@ -23,9 +23,12 @@ return {
 			callback = function(ev)
 				-- Buffer local mappings.
 				-- See `:help vim.lsp.*` for documentation on any of the below functions
-				local opts = { buffer = ev.buf, silent = true }
-				opts.desc = "Restart LSP"
-				keymap.set("n", "<leader>rl", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+				keymap.set(
+					"n",
+					"<leader>rl",
+					":LspRestart<CR>",
+					{ buffer = ev.buf, silent = true, desc = "Restart LSP" }
+				) -- mapping to restart lsp if necessary
 			end,
 		})
 

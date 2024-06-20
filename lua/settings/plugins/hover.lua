@@ -27,12 +27,12 @@ return {
 		})
 
 		-- Setup keymaps
-		vim.keymap.set("n", "gk", require("hover").hover, { desc = "hover.nvim" })
+		vim.keymap.set("n", "gk", require("hover").hover, { desc = "Hover doc" })
 		-- vim.keymap.set("n", "gK", require("hover").hover_select, { desc = "hover.nvim (select)" })
-		vim.keymap.set("n", "<C-p>", function()
+		vim.keymap.set("n", "<C-h>", function()
 			require("hover").hover_switch("previous")
 		end, { desc = "hover.nvim (previous source)" })
-		vim.keymap.set("n", "<C-n>", function()
+		vim.keymap.set("n", "<C-l>", function()
 			require("hover").hover_switch("next")
 		end, { desc = "hover.nvim (next source)" })
 

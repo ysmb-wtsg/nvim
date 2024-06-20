@@ -44,7 +44,6 @@ return {
 		function Lazydocker_toggle()
 			lazydocker:toggle()
 		end
-		vim.keymap.set("n", "<leader>d", "<cmd>lua Lazydocker_toggle()<CR>", { silent = true }
-)
+		vim.keymap.set("n", "<leader>d", "<cmd>lua Lazydocker_toggle()<CR>", { silent = true })
 	end,
 }
