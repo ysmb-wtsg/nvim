@@ -1,8 +1,17 @@
 return {
-	"folke/trouble.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons", "folke/todo-comments.nvim" },
-	config = function()
-		vim.keymap.set("n", "<leader>tf", "<cmd>Trouble diagnostics<CR>")
-		vim.keymap.set("n", "<leader>tt", "<cmd>Trouble todo<CR>")
-	end,
+  "folke/trouble.nvim",
+  opts = {}, -- for default options, refer to the configuration section for custom setup.
+  cmd = "Trouble",
+  keys = {
+    {
+      "<leader>tt",
+      "<cmd>Trouble diagnostics toggle<cr>",
+      desc = "Diagnostics (Trouble)",
+    },
+    {
+      "<leader>tf",
+      "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+      desc = "Buffer Diagnostics (Trouble)",
+    },
+  },
 }
