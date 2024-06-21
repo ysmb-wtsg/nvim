@@ -123,6 +123,12 @@ return {
 					},
 					{
 						"n",
+						"st",
+						actions.cycle_layout,
+						{ desc = "Toggle split direction" },
+					},
+					{
+						"n",
 						"tn",
 						actions.goto_file_tab,
 						{ desc = "Open the file in a new tabpage" },
