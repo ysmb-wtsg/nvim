@@ -12,22 +12,16 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
-		local transform_mod = require("telescope.actions.mt").transform_mod
-		local project_actions = require("telescope._extensions.project.actions")
-
-		local trouble = require("trouble")
-		local trouble_telescope = require("trouble.providers.telescope")
-
-		-- or create your custom action
-		local custom_actions = transform_mod({
-			open_trouble_qflist = function(prompt_bufnr)
-				trouble.toggle("quickfix")
-			end,
-		})
 
 		telescope.setup({
 			defaults = {
-				path_display = { "smart" },
+				layout_strategy = "horizontal",
+				layout_config = {
+					horizontal = {
+						prompt_position = "top",
+					},
+				},
+				sorting_strategy = "ascending",
 				mappings = {
 					i = {
 						["<C-o>"] = actions.select_default,
@@ -46,6 +40,9 @@ return {
 				},
 			},
 			extensions = {
+				ui_select = {
+					require("telescope.themes").get_dropdown(),
+				},
 				project = {
 					base_dirs = {
 						"~/proj",
