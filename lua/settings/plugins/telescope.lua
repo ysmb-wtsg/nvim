@@ -45,7 +45,7 @@ return {
 				},
 				project = {
 					base_dirs = {
-						"~/proj",
+						"~/projects",
 						"~/.config",
 						"~/dotfiles",
 					},
