@@ -22,7 +22,8 @@ return {
 		local formatted_date = string.format("%04d%02d%02d", date.year, date.month, date.day)
 		dashboard.section.buttons.val = {
 			dashboard.button("n", "  > Take Note", "<cmd>cd ~/notes | e ~/notes/" .. formatted_date .. ".md<CR>"),
-			dashboard.button("SPC fp", "  > Find Projects", "<cmd>Telescope project<CR>"),
+			dashboard.button("c", "  > Config", "<cmd>e ~/.config/nvim<CR>"),
+			dashboard.button("p", "  > Find Projects", "<cmd>Telescope project<CR>"),
 			dashboard.button("q", "  > Quit NVIM", "<cmd>qa<CR>"),
 		}
 
