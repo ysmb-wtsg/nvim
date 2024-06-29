@@ -1,6 +1,10 @@
 return {
 	"akinsho/nvim-bufferline.lua",
 	dependencies = "nvim-tree/nvim-web-devicons",
+	lazy = false,
+	keys = {
+		{ "tp", "<cmd>BufferLinePick<CR>", desc = "Pick tab" },
+	},
 	opts = {
 		options = {
 			custom_filter = function(buf_number)
