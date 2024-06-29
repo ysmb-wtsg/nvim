@@ -49,7 +49,7 @@ return {
 				-- 	},
 				-- },
 				relativenumber = true,
-				width = 35,
+				width = 50,
 			},
 			ui = {
 				confirm = {
