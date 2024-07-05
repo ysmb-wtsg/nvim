@@ -1,0 +1,10 @@
+{
+  "arrow": {
+    "prefix": "arrow",
+    "body": ["($1) => {$0}"]
+  },
+  "export const": {
+    "prefix": "export const",
+    "body": ["export const $1 = ($2) => {$0}"]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "todo": {
+    "prefix": "todo",
+    "body": ["TODO: "]
+  },
+  "note": {
+    "prefix": "note",
+    "body": ["NOTE: "]
+  }
+}
