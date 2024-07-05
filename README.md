@@ -1,6 +1,6 @@
 ## Requirements
 
-- Neovim 0.9+
+- Neovim 0.10+
 
 ## Installation
 
