@@ -6,5 +6,9 @@
   "export const": {
     "prefix": "export const",
     "body": ["export const $1 = ($2) => {$0}"]
+  },
+  "useEffect": {
+    "prefix": "useEffect",
+    "body": ["useEffect(($1) => {$2}, [$0])"]
   }
 }
