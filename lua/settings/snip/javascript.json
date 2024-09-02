@@ -3,6 +3,14 @@
     "prefix": "arrow",
     "body": ["($1) => {$0}"]
   },
+  "import modules": {
+    "prefix": "import modules",
+    "body": ["import $1 from '$2'"]
+  },
+  "export modules": {
+    "prefix": "export modules",
+    "body": ["export $1 from '$2'"]
+  },
   "export const": {
     "prefix": "export const",
     "body": ["export const $1 = ($2) => {$0}"]
