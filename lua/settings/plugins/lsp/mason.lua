@@ -42,6 +42,8 @@ return {
         "black",
         "pylint",
         "eslint_d",
+        "shellcheck",
+        "shfmt"
       },
     })
   end,
