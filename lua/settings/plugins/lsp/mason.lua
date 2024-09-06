@@ -31,6 +31,7 @@ return {
         "emmet_ls",
         "prismals",
         "pyright",
+        "yamlls",
       },
     })
 
@@ -43,7 +44,9 @@ return {
         "pylint",
         "eslint_d",
         "shellcheck",
-        "shfmt"
+        "shfmt",
+        "yamllint",
+        "yamlfmt"
       },
     })
   end,
