@@ -43,15 +43,16 @@ return {
 				"sql",
 				"ssh_config",
 			},
-			incremental_selection = {
-				enable = true,
-				keymaps = {
-					init_selection = "<C-CR>",
-					node_incremental = "<C-CR>",
-					scope_incremental = false,
-					node_decremental = "<bs>",
-				},
-			},
+			-- use wildfire as a substitute
+			-- incremental_selection = {
+			-- 	enable = true,
+			-- 	keymaps = {
+			-- 		init_selection = "<C-CR>",
+			-- 		node_incremental = "<C-CR>",
+			-- 		scope_incremental = false,
+			-- 		node_decremental = "<bs>",
+			-- 	},
+			-- },
 		})
 	end,
 }
