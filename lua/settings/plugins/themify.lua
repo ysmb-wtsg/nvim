@@ -10,6 +10,8 @@ return {
 			{ "tiagovla/tokyodark.nvim", branch = "master" },
 			"oxfist/night-owl.nvim",
 			"olivercederborg/poimandres.nvim",
+			"zootedb0t/citruszest.nvim",
+			"atmosuwiryo/vim-winteriscoming",
 		})
 		vim.keymap.set("n", "<leader>fc", "<cmd>Themify<CR>", { silent = true, desc = "Select colorscheme" })
 	end,
