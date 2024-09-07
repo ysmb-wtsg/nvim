@@ -4,12 +4,10 @@ return {
 	config = function()
 		local lualine = require("lualine")
 
-		local my_theme = require("lualine.themes.tokyonight")
-
 		-- configure lualine with modified theme
 		lualine.setup({
 			options = {
-				theme = my_theme,
+				theme = "auto",
 				globalstatus = true,
 			},
 			sections = {
