@@ -1,0 +1,32 @@
+{
+  "githubActions": {
+    "prefix": "githubActions",
+    "body": [
+      "name: $1",
+      "on:",
+      "  push:",
+      "    branches:",
+      "      - 'main'",
+      "  pull_request:",
+      "    types:",
+      "      - opened",
+      "      - synchronize",
+      "      - closed",
+      "    branches:",
+      "      - main",
+      "      - develop",
+      "jobs:",
+      "  $2:",
+      "    runs-on: $3",
+      "    permissions:",
+      "      contents: $4",
+      "    steps:",
+      "      - uses: $5",
+      "      - name: $6",
+      "        uses: $7",
+      "      - name: $8",
+      "        run: |",
+      "          $9"
+    ]
+  }
+}
