@@ -448,6 +448,12 @@ return {
 					},
 					{ "n", "<leader>e", actions.toggle_files, { desc = "Toggle the file panel" } },
 					{ "n", "g?", actions.help("file_history_panel"), { desc = "Open the help panel" } },
+					{
+						"n",
+						"<leader>vq",
+						"<cmd>tabclose<CR>",
+						{ desc = "Close panel" },
+					},
 				},
 				option_panel = {
 					{ "n", "<tab>", actions.select_entry, { desc = "Change the current option" } },
