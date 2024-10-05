@@ -33,17 +33,16 @@ return {
 		vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
 		local Terminal = require("toggleterm.terminal").Terminal
-		local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float", count = 999 })
 		local lazydocker = Terminal:new({ cmd = "lazydocker", hidden = true, direction = "float", count = 998 })
-
-		function Lazygit_toggle()
-			lazygit:toggle()
-		end
-		vim.keymap.set("n", "<leader>g", "<cmd>lua Lazygit_toggle()<CR>", { silent = true })
 
 		function Lazydocker_toggle()
 			lazydocker:toggle()
 		end
-		vim.keymap.set("n", "<leader>d", "<cmd>lua Lazydocker_toggle()<CR>", { silent = true })
+		vim.keymap.set(
+			"n",
+			"<leader>d",
+			"<cmd>lua Lazydocker_toggle()<CR>",
+			{ silent = true, desc = "Toggle lazydocker" }
+		)
 	end,
 }
