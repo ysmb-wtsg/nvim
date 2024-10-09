@@ -4,6 +4,22 @@ return {
 	build = ":TSUpdate",
 	dependencies = { "windwp/nvim-ts-autotag", "nvim-treesitter/nvim-treesitter-textobjects" },
 	config = function()
+		require("nvim-ts-autotag").setup({
+			opts = {
+				-- Defaults
+				enable_close = true, -- Auto close tags
+				enable_rename = true, -- Auto rename pairs of tags
+				enable_close_on_slash = false, -- Auto close on trailing </
+			},
+			-- Also override individual filetype configs, these take priority.
+			-- Empty by default, useful if one of the "opts" global settings
+			-- doesn't work well in a specific filetype
+			per_filetype = {
+				["html"] = {
+					enable_close = false,
+				},
+			},
+		})
 		-- import nvim-treesitter plugin
 		local treesitter = require("nvim-treesitter.configs")
 
@@ -12,8 +28,6 @@ return {
 			highlight = { enable = true },
 			-- enable indentation
 			indent = { enable = true },
-			-- enable autotagging (w/ nvim-ts-autotag plugin)
-			autotag = { enable = true },
 			-- ensure these language parsers are installed
 			ensure_installed = {
 				"json",
