@@ -12,6 +12,7 @@ return {
 			"olivercederborg/poimandres.nvim",
 			"zootedb0t/citruszest.nvim",
 			"atmosuwiryo/vim-winteriscoming",
+			"maxmx03/fluoromachine.nvim",
 		})
 		vim.keymap.set("n", "<leader>fc", "<cmd>Themify<CR>", { silent = true, desc = "Select colorscheme" })
 	end,
