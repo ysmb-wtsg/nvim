@@ -1,11 +1,9 @@
 return {
 	"vinnymeller/swagger-preview.nvim",
-	build = "npm install -g swagger-ui-watcher",
+	cmd = { "SwaggerPreview", "SwaggerPreviewStop", "SwaggerPreviewToggle" },
 	keys = {
 		{ "<leader>ps", "<cmd>SwaggerPreview<CR>", desc = "Preview Swagger" },
 	},
-	opts = {
-		port = 8000,
-		host = "localhost",
-	},
+	build = "npm i",
+	config = true,
 }
