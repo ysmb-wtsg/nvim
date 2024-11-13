@@ -39,9 +39,7 @@ return {
 			ensure_installed = {
 				"prettier",
 				"stylua",
-				"isort",
-				"black",
-				"pylint",
+				"ruff", -- as linter formatter
 				"eslint_d",
 				"shellcheck",
 				"shfmt",
