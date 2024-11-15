@@ -28,7 +28,6 @@ keymap.set("n", ";", ":")
 
 -- insert mode
 keymap.set("i", "jj", "<ESC>")
-keymap.set("i", "<C-CR>", "<ESC>%%a")
 
 -- visual mode
 keymap.set("v", "c", '"_c')
