@@ -32,6 +32,7 @@ return {
 				"prismals",
 				"pyright",
 				"yamlls",
+				"gopls",
 			},
 		})
 
@@ -45,6 +46,7 @@ return {
 				"shfmt",
 				"yamllint",
 				"yamlfmt",
+				"staticcheck",
 			},
 		})
 	end,

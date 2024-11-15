@@ -56,6 +56,7 @@ return {
 				"dockerfile",
 				"sql",
 				"ssh_config",
+				"go",
 			},
 			-- use wildfire as a substitute
 			-- incremental_selection = {
