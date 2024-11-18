@@ -64,5 +64,11 @@ return {
 		vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { silent = true, desc = "Telescope buffers" })
 		vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { silent = true, desc = "Telescope files" })
 		vim.keymap.set("n", "<leader>fp", "<cmd>Telescope project<CR>", { silent = true, desc = "Telescope projects" })
+		vim.keymap.set(
+			"n",
+			"/",
+			"<cmd>Telescope current_buffer_fuzzy_find<CR>",
+			{ silent = true, desc = "Telescope strings in current buffer" }
+		)
 	end,
 }
