@@ -14,9 +14,17 @@ return {
 			neotest.setup({
 				adapters = {
 					require("neotest-python")({
-						args = { "--log-level", "DEBUG" },
+						args = { "--log-level", "DEBUG", "--cov", "--cov-branch", "-v" },
 						runner = "pytest",
 					}),
+				},
+				discovery = {
+					filter_dir = function(name, rel_path, root)
+						if string.find(rel_path, "node_modules") or string.find(rel_path, "cdk.out") then
+							return false
+						end
+						return true
+					end,
 				},
 			})
 			vim.keymap.set("n", "<leader>tr", function()
