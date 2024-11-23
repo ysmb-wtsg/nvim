@@ -23,9 +23,9 @@ return {
 			-- engine = 'ripgrep' is default, but 'astgrep' can be specified
 		})
 		vim.keymap.set("n", "<leader>fg", function()
-			grug_far.with_visual_selection({
+			grug_far.open({
 				prefills = {
-					flags = "--ignore-case",
+					flags = "--fixed-strings --ignore-case",
 				},
 			})
 		end, { silent = true, desc = "Telescope strings (with grug-far)" })
