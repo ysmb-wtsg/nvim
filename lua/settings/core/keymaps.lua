@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = ","
 
 -- for conciseness
 local keymap = vim.keymap
