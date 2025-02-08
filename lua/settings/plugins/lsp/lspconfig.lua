@@ -88,8 +88,7 @@ return {
 					capabilities = capabilities,
 					settings = {
 						python = {
-							venvPath = ".",
-							pythonPath = "./.venv/bin/python",
+							pythonPath = ".venv/bin/python",
 							analysis = {
 								typeCheckingMode = "basic",
 								autoSearchPaths = true,
