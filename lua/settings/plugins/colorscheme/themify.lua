@@ -14,6 +14,7 @@ return {
 			"atmosuwiryo/vim-winteriscoming",
 			"maxmx03/fluoromachine.nvim",
 			{ "zenbones-theme/zenbones.nvim", dependencies = "rktjmp/lush.nvim" },
+			{ "Mofiqul/vscode.nvim" },
 		})
 		vim.keymap.set("n", "<leader>fc", "<cmd>Themify<CR>", { silent = true, desc = "Select colorscheme" })
 	end,
