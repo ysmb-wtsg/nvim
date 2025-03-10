@@ -33,6 +33,7 @@ return {
 				"pyright",
 				"yamlls",
 				"gopls",
+				"jsonls",
 			},
 		})
 
