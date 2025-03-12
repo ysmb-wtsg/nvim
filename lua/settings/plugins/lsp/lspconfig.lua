@@ -6,8 +6,10 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 		{ "folke/neodev.nvim", opts = {} },
 		{ "b0o/schemastore.nvim" },
+    {'nvim-java/nvim-java'},
 	},
 	config = function()
+    require('java').setup()
 		-- import lspconfig plugin
 		local lspconfig = require("lspconfig")
 
@@ -123,6 +125,9 @@ return {
 						},
 					},
 				})
+			end,
+			["jdtls"] = function()
+				lspconfig.jdtls.setup({})
 			end,
 		})
 	end,
