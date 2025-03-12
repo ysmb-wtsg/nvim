@@ -15,6 +15,22 @@ return {
 			"maxmx03/fluoromachine.nvim",
 			{ "zenbones-theme/zenbones.nvim", dependencies = "rktjmp/lush.nvim" },
 			{ "Mofiqul/vscode.nvim" },
+			{
+				"ilof2/posterpole.nvim",
+				branch = "master",
+				priority = 1000,
+				config = function()
+					local posterpole = require("posterpole")
+					posterpole.setup({
+						-- config here
+					})
+					vim.cmd("colorscheme posterpole")
+
+					-- This function create sheduled task, which will reload theme every hour
+					-- Without "setup_adaptive" adaptive brightness will be set only after every restart
+					posterpole.setup_adaptive()
+				end,
+			},
 		})
 		vim.keymap.set("n", "<leader>fc", "<cmd>Themify<CR>", { silent = true, desc = "Select colorscheme" })
 	end,
