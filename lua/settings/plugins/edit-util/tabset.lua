@@ -11,6 +11,7 @@ return {
 				{
 					filetypes = {
 						"python",
+						"java",
 					},
 					config = {
 						tabwidth = 4,
