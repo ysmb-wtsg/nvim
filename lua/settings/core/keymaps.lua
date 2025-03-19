@@ -48,7 +48,7 @@ keymap.set("v", "-", "<C-x>gv")
 -- using leader
 keymap.set("n", "<leader>hx", "<cmd>nohl<CR>", { silent = true, desc = "Disable hilight" })
 keymap.set("n", "<leader>q", "<cmd>q<CR>", { silent = true, desc = "Close buffer" })
-keymap.set("n", "<leader>rp", ":%s/", { silent = true, desc = "Replace" })
+keymap.set("n", "<leader>rp", ":%s/", { desc = "Replace", })
 keymap.set("n", "<leader>rf", "<cmd>e<CR>", { silent = true, desc = "Refresh buffer" })
 keymap.set("n", "<leader>sv", "<C-w>v", { silent = true, desc = "Split vertically" }) -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s", { silent = true, desc = "Split horizontally" }) -- split window vertically
