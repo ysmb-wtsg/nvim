@@ -20,7 +20,11 @@ return {
 				},
 				discovery = {
 					filter_dir = function(name, rel_path, root)
-						if string.find(rel_path, "node_modules") or string.find(rel_path, "cdk.out") then
+						if
+							string.find(rel_path, "node_modules")
+							or string.find(rel_path, "cdk.out")
+							or string.find(rel_path, "libs")
+						then
 							return false
 						end
 						return true
