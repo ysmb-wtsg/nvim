@@ -1,6 +1,6 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	dependencies = { "nvim-tree/nvim-web-devicons", "ravitemer/mcphub.nvim" },
 	config = function()
 		local lualine = require("lualine")
 
@@ -12,6 +12,9 @@ return {
 			},
 			sections = {
 				lualine_c = {},
+				lualine_x = {
+					{ require("mcphub.extensions.lualine") },
+				},
 				lualine_z = {
 					{
 						"datetime",

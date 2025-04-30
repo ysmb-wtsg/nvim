@@ -5,6 +5,18 @@ return {
 	version = false, -- set this if you want to always pull the latest change
 	opts = {
 		provider = "openai",
+		-- system_prompt as function ensures LLM always has latest MCP server state
+		-- This is evaluated for every message, even in existing chats
+		system_prompt = function()
+			local hub = require("mcphub").get_hub_instance()
+			return hub:get_active_servers_prompt()
+		end,
+		-- Using function prevents requiring mcphub before it's loaded
+		custom_tools = function()
+			return {
+				require("mcphub.extensions.avante").mcp_tool(),
+			}
+		end,
 	},
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
 	build = "make",
