@@ -4,6 +4,9 @@ return {
 	lazy = false,
 	version = false, -- set this if you want to always pull the latest change
 	opts = {
+		windows = {
+			width = 40,
+		},
 		provider = "openai",
 		-- system_prompt as function ensures LLM always has latest MCP server state
 		-- This is evaluated for every message, even in existing chats
