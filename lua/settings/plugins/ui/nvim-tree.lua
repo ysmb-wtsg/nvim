@@ -63,6 +63,7 @@ return {
 				-- width = function()
 				-- 	return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
 				-- end,
+				width = "30%",
 			},
 			ui = {
 				confirm = {
