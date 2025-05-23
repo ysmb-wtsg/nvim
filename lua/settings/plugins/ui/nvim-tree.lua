@@ -11,7 +11,7 @@ return {
 			local api = require("nvim-tree.api")
 
 			local function opts(desc)
-				return { desc = "uvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+				return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
 			end
 
 			api.config.mappings.default_on_attach(bufnr)
@@ -19,6 +19,7 @@ return {
 			vim.keymap.set("n", "o", api.node.open.edit, opts("Open"))
 			vim.keymap.set("n", "s", api.node.open.vertical, opts("Open: Vertical Split"))
 			vim.keymap.set("n", "w", api.node.navigate.parent_close, opts("Close Directory"))
+			vim.keymap.set("n", "i", api.node.show_info_popup, opts("Toggle info"))
 		end
 		local nvimtree = require("nvim-tree")
 		vim.g.loaded_netrw = 1
