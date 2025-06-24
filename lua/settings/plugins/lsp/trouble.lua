@@ -11,14 +11,6 @@ return {
 					size = 0.3,
 				},
 			},
-			lsp = {
-				win = {
-					type = "float",
-					relative = "editor",
-					title = "LSP Definitions / references / ... (Trouble)",
-					title_pos = "center",
-				},
-			},
 			symbols = {
 				win = {
 					type = "split",
