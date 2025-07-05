@@ -82,6 +82,17 @@ return {
 			"<cmd>Telescope lsp_definitions<CR>",
 			{ silent = true, desc = "Telescope lsp_definitions" }
 		)
-		vim.keymap.set("n", "gt", "<cmd>Telescope diagnostics<CR>", { silent = true, desc = "Telescope diagnostics" })
+		vim.keymap.set(
+			"n",
+			"gt",
+			"<cmd>Telescope diagnostics bufnr=0<CR>",
+			{ silent = true, desc = "Telescope diagnostics in current buffer" }
+		)
+		vim.keymap.set(
+			"n",
+			"gT",
+			"<cmd>Telescope diagnostics<CR>",
+			{ silent = true, desc = "Telescope diagnostics in workspace" }
+		)
 	end,
 }
