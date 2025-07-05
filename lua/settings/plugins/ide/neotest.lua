@@ -16,6 +16,7 @@ return {
 					require("neotest-python")({
 						args = { "--log-level", "DEBUG", "--cov", "--cov-branch", "-v" },
 						runner = "pytest",
+						python = ".venv/bin/python",
 					}),
 				},
 				discovery = {
