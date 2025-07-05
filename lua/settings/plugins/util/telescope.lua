@@ -6,7 +6,6 @@ return {
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-telescope/telescope-project.nvim",
 		"nvim-tree/nvim-web-devicons",
-		"folke/trouble.nvim",
 		"folke/todo-comments.nvim",
 	},
 	config = function()
@@ -70,6 +69,18 @@ return {
 			"/",
 			"<cmd>Telescope current_buffer_fuzzy_find<CR>",
 			{ silent = true, desc = "Telescope strings in current buffer" }
+		)
+		vim.keymap.set(
+			"n",
+			"gr",
+			"<cmd>Telescope lsp_references<CR>",
+			{ silent = true, desc = "Telescope lsp_references" }
+		)
+		vim.keymap.set(
+			"n",
+			"gd",
+			"<cmd>Telescope lsp_definitions<CR>",
+			{ silent = true, desc = "Telescope lsp_definitions" }
 		)
 	end,
 }

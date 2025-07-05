@@ -28,24 +28,9 @@ return {
 	cmd = "Trouble",
 	keys = {
 		{
-			"gt",
-			"<cmd>Trouble diagnostics toggle focus=true filter.buf=0<cr>",
-			desc = "Diagnostics (Trouble)",
-		},
-		{
 			"go",
 			"<cmd>Trouble symbols toggle focus=true<cr>",
 			desc = "Symbols (Trouble)",
-		},
-		{
-			"gf",
-			"<cmd>Trouble lsp toggle focus=true<cr>",
-			desc = "LSP Definitions / references / ... (Trouble)",
-		},
-		{
-			"gq",
-			"<cmd>Trouble qflist toggle<cr>",
-			desc = "Quickfix List (Trouble)",
 		},
 	},
 }
