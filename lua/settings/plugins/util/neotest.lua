@@ -19,18 +19,36 @@ return {
 					}),
 				},
 				discovery = {
-					filter_dir = function(name, rel_path, root)
+					filter_dir = function(rel_path)
 						if
 							string.find(rel_path, "node_modules")
 							or string.find(rel_path, "cdk.out")
 							or string.find(rel_path, "libs")
+							or string.find(rel_path, "lib")
 						then
 							return false
 						end
 						return true
 					end,
 				},
+				summary = {
+					mappings = {
+						expand = "<leader>",
+						expand_all = "<leader><leader>",
+					},
+				},
+				icons = {
+					child_indent = "│",
+					child_prefix = "├",
+					collapsed = "─",
+					expanded = "╮",
+					passed = "",
+					running = "",
+					failed = "",
+					unknown = "",
+				},
 			})
+
 			vim.keymap.set("n", "<leader>tr", function()
 				require("neotest").run.run()
 			end, { desc = "Neotest run current method" })
@@ -39,6 +57,7 @@ return {
 			end, { desc = "Neotest run current file" })
 			vim.keymap.set("n", "<leader>ts", function()
 				require("neotest").summary.toggle()
+				vim.cmd("wincmd l")
 			end, { desc = "Neotest toggle summary" })
 			vim.keymap.set("n", "<leader>tw", function()
 				require("neotest").watch.toggle()
