@@ -73,10 +73,10 @@ return {
 				log_options = { -- See |diffview-config-log_options|
 					git = {
 						single_file = {
-							diff_merges = "combined",
+							diff_merges = "off",
 						},
 						multi_file = {
-							diff_merges = "first-parent",
+							diff_merges = "off",
 						},
 					},
 					hg = {
