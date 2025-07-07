@@ -18,7 +18,7 @@ return {
 				lualine_z = {
 					{
 						"datetime",
-						style = "%H:%M",
+						style = "%Y/%m/%d(%a) %H:%M",
 					},
 				},
 			},
