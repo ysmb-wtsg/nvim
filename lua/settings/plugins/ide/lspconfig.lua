@@ -40,7 +40,7 @@ return {
 			"jsonls",
 		}
 
-		mason_lspconfig.setup(lsp_list)
+		mason_lspconfig.setup({ensure_installed = lsp_list})
 
 		mason_tool_installer.setup({
 			ensure_installed = {
