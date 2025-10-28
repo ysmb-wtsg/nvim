@@ -11,6 +11,12 @@ return {
       "olivercederborg/poimandres.nvim",
       "zootedb0t/citruszest.nvim",
       { "Mofiqul/vscode.nvim" },
+      {
+        "ricardoraposo/nightwolf.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+      }
     })
     vim.keymap.set("n", "<leader>fc", "<cmd>Themify<CR>", { silent = true, desc = "Select colorscheme" })
   end,
