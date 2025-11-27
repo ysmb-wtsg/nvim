@@ -8,15 +8,13 @@ return {
       "folke/tokyonight.nvim",
       "catppuccin/nvim",
       { "tiagovla/tokyodark.nvim", branch = "master" },
-      "olivercederborg/poimandres.nvim",
-      "zootedb0t/citruszest.nvim",
-      { "Mofiqul/vscode.nvim" },
       {
         "ricardoraposo/nightwolf.nvim",
         lazy = false,
         priority = 1000,
         opts = {},
-      }
+      },
+      { "rebelot/kanagawa.nvim" }
     })
     vim.keymap.set("n", "<leader>fc", "<cmd>Themify<CR>", { silent = true, desc = "Select colorscheme" })
   end,
