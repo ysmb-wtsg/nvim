@@ -21,7 +21,7 @@ return {
     },
   },
   keys = {
-    { "/",          function() require("snacks").picker.grep() end,                                    desc = "Grep" },
+    { "/",          function() require("snacks").picker.lines({ layout = "default" }) end,             desc = "Grep" },
     { "<leader>;",  function() require("snacks").picker.command_history() end,                         desc = "Command History" },
     -- find
     { "<leader>fc", function() require("snacks").picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
