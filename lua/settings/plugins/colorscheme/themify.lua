@@ -14,7 +14,13 @@ return {
         priority = 1000,
         opts = {},
       },
-      { "rebelot/kanagawa.nvim" }
+      { "rebelot/kanagawa.nvim" },
+      {
+        "wnkz/monoglow.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+      }
     })
     vim.keymap.set("n", "<leader>fc", "<cmd>Themify<CR>", { silent = true, desc = "Select colorscheme" })
   end,
