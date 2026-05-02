@@ -1,4 +1,4 @@
-local toggle_key = "<C-;>cc"
+local toggle_key = "<C-;>"
 return {
   {
     "coder/claudecode.nvim",
