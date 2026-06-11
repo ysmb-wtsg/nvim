@@ -7,6 +7,7 @@ return {
       { toggle_key, "<cmd>ClaudeCodeFocus<cr>", desc = "Claude Code", mode = { "n", "x" } },
     },
     opts = {
+      terminal_cmd = "headroom wrap claude",
       terminal = {
         ---@module "snacks"
         ---@type snacks.win.Config|{}
