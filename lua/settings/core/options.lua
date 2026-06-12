@@ -38,3 +38,6 @@ opt.iskeyword:append("=")
 opt.conceallevel = 1
 
 opt.laststatus = 3
+
+vim.opt.title = true
+vim.opt.titlestring = '%{fnamemodify(getcwd(), ":t")}'
